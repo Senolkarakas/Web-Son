@@ -382,6 +382,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === unReportModal) unReportModal.close();
     });
 
+    /* --------------------------------------------------------------------------
+       13. Vicdan Mahkemesi Files Link List Modal Controls
+       -------------------------------------------------------------------------- */
+    const vicdanFilesModal = document.getElementById('vicdan-files-modal');
+    const closeVicdanFilesModalBtn = document.getElementById('close-vicdan-files-modal');
+
+    closeVicdanFilesModalBtn?.addEventListener('click', () => vicdanFilesModal?.close());
+    vicdanFilesModal?.addEventListener('click', (e) => {
+        if (e.target === vicdanFilesModal) vicdanFilesModal.close();
+    });
+
     rsvpForm?.addEventListener('submit', (e) => {
         e.preventDefault();
         rsvpModal?.close();
