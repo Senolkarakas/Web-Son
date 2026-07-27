@@ -195,7 +195,7 @@
                     <p class="section-subtitle">Sömürgeciliğe, işgale ve militarizme karşı halkların kardeşliğini ve barışı savunan aktivistlerin mücadele zeminidir.</p>
                 </div>
 
-                <div class="grid grid-2 align-center">
+                <div class="grid grid-2 align-start" style="align-items: flex-start;">
                     <div class="about-content glass-panel" style="padding: 2.5rem;">
                         <p class="lead-text" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.2rem;">
                             ABD emperyalizmi ve İsrail’in askeri saldırganlığı, nükleer tehditlerin savrulduğu ve şiddet, yıkım, ekosistem ve kitle katliamlarının normalleştirildiği küresel bir boyuta ulaştı. Nakba’dan bugüne Filistin’de süren yerleşimci sömürgecilik ve soykırımcı işgal; ABD-İsrail ortaklığının İran’ı ve Lübnan’ı hedef alan bombardımanlarıyla daha tehlikeli bir aşamaya evrilmiştir.
@@ -220,20 +220,20 @@
                         </div>
                     </div>
 
-                    <div class="manifesto-card glass-panel">
+                    <div class="manifesto-card glass-panel" style="padding: 2.5rem;">
                         <div class="manifesto-img-box" style="margin-bottom: 1.5rem; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color);">
                             <img src="assets/fop_31_aralik_2023.png" alt="Savaşa Hayır İnisiyatifi FÖP 31 Aralık 2023 Eylemi" style="width: 100%; height: auto; display: block;">
                         </div>
                         <h3 class="manifesto-title"><i class="fa-solid fa-hand-peace green-text"></i> İnisiyatif Bildirgesi ve Çağrılar</h3>
                         <ul class="manifesto-list">
-                            <li><i class="fa-solid fa-check-double green-text"></i> Silah Ticaretine ve Askeri Sevkiyatlara Karşı Blokaj Çağrısı</li>
-                            <li><i class="fa-solid fa-check-double green-text"></i> Vicdani Ret ve Militariszme Karşı Barış Deklarasyonu</li>
-                            <li><i class="fa-solid fa-check-double green-text"></i> Uluslararası Anti-Militarist Örgütlerle Ortak Eylem Ağı</li>
+                            <li><i class="fa-solid fa-check-double green-text"></i> İsrail'e ve mazlumlara savaş açanlara silah ticareti ve askeri sevkiyatlara karşı mücadele</li>
+                            <li><i class="fa-solid fa-check-double green-text"></i> ABD ve NATO'ya karşı aralıksız mücadele</li>
+                            <li><i class="fa-solid fa-check-double green-text"></i> Uluslararası Savaş Karşıtı Platformlarla Ortak Eylem Ağlarının İnşası</li>
                         </ul>
-                        <div class="manifesto-footer">
-                            <button class="btn btn-primary btn-block" onclick="alert('Savaşa Hayır İnisiyatifi Barış Deklarasyonu (.PDF) indiriliyor.');">
-                                <i class="fa-solid fa-file-pdf"></i> İnisiyatif Deklarasyonunu İndir
-                            </button>
+                        <div class="manifesto-footer" style="margin-top: 2rem;">
+                            <a href="assets/savasa_hayir_deklarasyonu.pdf" download="Savasa_Hayir_Deklarasyonu.pdf" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-file-pdf"></i> İnisiyatif Deklarasyonunu İndir (.PDF)
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -266,37 +266,45 @@
                     <div class="archive-card" data-tags="rapor hukuk">
                         <div class="archive-icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
                         <div class="archive-content">
-                            <span class="doc-type-badge">BM Raporu • PDF</span>
-                            <h3 class="doc-title">BM İnsan Hakları Yüksek Komiserliği 2025 Gazze Durum Raporu</h3>
-                            <p class="doc-desc">Sivil altyapı tahribatı, uluslararası insancıl hukuk ihlalleri ve gözlemci heyeti bulguları kütüphane kaydı.</p>
+                            <span class="doc-type-badge">BM Raporu • PDF (TR & EN)</span>
+                            <h3 class="doc-title">
+                                <a href="#" class="un-report-trigger-link" style="color: inherit; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--palestine-red)'" onmouseout="this.style.color='inherit'" onclick="event.preventDefault(); document.getElementById('un-report-modal')?.showModal();">
+                                    İşgal Altındaki Filistin Toprakları ve İsrail Hakkında Bağımsız Uluslararası Soruşturma Komisyonu’nun Raporu <i class="fa-solid fa-up-right-from-square" style="font-size: 0.8rem; margin-left: 0.3rem; opacity: 0.7;"></i>
+                                </a>
+                            </h3>
+                            <p class="doc-desc">Doğu Kudüs dahil İşgal Altındaki Filistin Toprakları ve İsrail'deki eğitim, kültür ve insan hakları ihlallerine ilişkin BM A/HRC/59/26 sayılı resmi soruşturma raporu.</p>
                             <div class="doc-meta">
                                 <span><i class="fa-regular fa-calendar"></i> 2025</span>
                                 <span><i class="fa-solid fa-download"></i> 14.2 bin İndirme</span>
-                                <span><i class="fa-solid fa-hard-drive"></i> 4.2 MB</span>
+                                <span><i class="fa-solid fa-hard-drive"></i> PDF (TR & EN)</span>
                             </div>
                         </div>
                         <div class="archive-action">
-                            <a href="#" class="btn btn-sm btn-outline-primary" onclick="alert('Belge indirme simülasyonu: BM_Gazze_2025_Raporu.pdf indiriliyor.'); return false;">
+                            <button class="btn btn-sm btn-outline-primary un-report-trigger-btn" onclick="document.getElementById('un-report-modal')?.showModal();">
                                 <i class="fa-solid fa-download"></i> İndir
-                            </a>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="archive-card" data-tags="hukuk">
+                    <div class="archive-card" data-tags="hukuk haber">
                         <div class="archive-icon law"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
                         <div class="archive-content">
-                            <span class="doc-type-badge">Mahkeme Kararı</span>
-                            <h3 class="doc-title">Uluslararası Adalet Divanı (UAD) Geçici Tedbir Kararları Metni</h3>
-                            <p class="doc-desc">Güney Afrika Cumhuriyeti tarafınca açılan davada verilen bağlayıcı hukuki kararların Türkçe ve İngilizce tam metni.</p>
+                            <span class="doc-type-badge">Hukuki Analiz • PDF</span>
+                            <h3 class="doc-title">
+                                <a href="assets/UAD_Gecici_Tedbir_Karari_Haberi.pdf" target="_blank" download="UAD_Gecici_Tedbir_Karari_Haberi.pdf" style="color: inherit; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--palestine-red)'" onmouseout="this.style.color='inherit'">
+                                    Uluslararası Adalet Divanı (UAD) Geçici Tedbir Kararı Haberi <i class="fa-solid fa-up-right-from-square" style="font-size: 0.8rem; margin-left: 0.3rem; opacity: 0.7;"></i>
+                                </a>
+                            </h3>
+                            <p class="doc-desc">Uluslararası Adalet Divanı'nın (ICJ) 26 Ocak 2024 tarihli kararına ilişkin "İsrail Gazze'de soykırımı önlemek için tüm tedbirleri almak zorunda" başlıklı detaylı haber ve hukuki analiz metni.</p>
                             <div class="doc-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 2024</span>
+                                <span><i class="fa-regular fa-calendar"></i> 26 Ocak 2024</span>
                                 <span><i class="fa-solid fa-download"></i> 28.9 bin İndirme</span>
-                                <span><i class="fa-solid fa-hard-drive"></i> 1.8 MB</span>
+                                <span><i class="fa-solid fa-hard-drive"></i> PDF</span>
                             </div>
                         </div>
                         <div class="archive-action">
-                            <a href="#" class="btn btn-sm btn-outline-primary" onclick="alert('Belge indirme simülasyonu: UAD_Karar_Metni.pdf indiriliyor.'); return false;">
-                                <i class="fa-solid fa-download"></i> İndir
+                            <a href="assets/UAD_Gecici_Tedbir_Karari_Haberi.pdf" download="UAD_Gecici_Tedbir_Karari_Haberi.pdf" class="btn btn-sm btn-outline-primary">
+                                <i class="fa-solid fa-download"></i> İndir (.PDF)
                             </a>
                         </div>
                     </div>
@@ -1054,6 +1062,54 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-block btn-lg"><i class="fa-solid fa-check"></i> Katılımımı Onayla</button>
             </form>
+        </div>
+    </dialog>
+
+    <!-- MODAL 3: UN Report Download Selection Modal -->
+    <dialog class="custom-modal" id="un-report-modal">
+        <div class="modal-content glass-panel" style="padding: 2rem 2.5rem; max-width: 680px; border: 1px solid var(--border-color);">
+            <button class="modal-close" id="close-un-report-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header text-center" style="margin-bottom: 2rem;">
+                <span class="section-tag red-tag" style="margin-bottom: 0.6rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+                    <i class="fa-solid fa-file-pdf"></i> BM RESMİ RAPOR DOSYALARI
+                </span>
+                <h3 class="modal-title" style="font-size: 1.35rem; line-height: 1.4; margin-top: 0.5rem;">
+                    İşgal Altındaki Filistin Toprakları ve İsrail Hakkında Bağımsız Uluslararası Soruşturma Komisyonu’nun Raporu
+                </h3>
+                <p class="modal-subtitle" style="margin-top: 0.6rem; color: var(--text-secondary); font-size: 0.95rem;">
+                    Birleşmiş Milletler İnsan Hakları Konseyi (A/HRC/59/26) Raporunu İndirmek İçin Dil Seçimi Yapınız:
+                </p>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                <!-- Option 1: Türkçe PDF -->
+                <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.6);">
+                    <div style="display: flex; align-items: center; gap: 1.2rem; flex: 1; min-width: 240px;">
+                        <div style="font-size: 2.4rem; color: var(--palestine-red);"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">🇹🇷 Türkçe Rapor (A/HRC/59/26)</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Doğu Kudüs dahil İşgal Altındaki Filistin Toprakları ve İsrail Raporu Türkçe Metni</p>
+                        </div>
+                    </div>
+                    <a href="assets/UN_Sorusturma_Komisyonu_Raporu_TR.pdf" download="UN_Sorusturma_Komisyonu_Raporu_TR.pdf" class="btn btn-primary btn-md">
+                        <i class="fa-solid fa-download"></i> Türkçe İndir (.PDF)
+                    </a>
+                </div>
+
+                <!-- Option 2: English PDF -->
+                <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.6);">
+                    <div style="display: flex; align-items: center; gap: 1.2rem; flex: 1; min-width: 240px;">
+                        <div style="font-size: 2.4rem; color: #3B82F6;"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">🇬🇧 English Report (A/HRC/59/26)</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Report of the Independent International Commission of Inquiry</p>
+                        </div>
+                    </div>
+                    <a href="assets/UN_Commission_of_Inquiry_Report_EN.pdf" download="UN_Commission_of_Inquiry_Report_EN.pdf" class="btn btn-secondary btn-md">
+                        <i class="fa-solid fa-download"></i> Download English (.PDF)
+                    </a>
+                </div>
+            </div>
         </div>
     </dialog>
 

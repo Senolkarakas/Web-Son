@@ -371,6 +371,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeRsvpModalBtn?.addEventListener('click', () => rsvpModal?.close());
 
+    /* --------------------------------------------------------------------------
+       12. UN Report Download Modal Controls
+       -------------------------------------------------------------------------- */
+    const unReportModal = document.getElementById('un-report-modal');
+    const closeUnReportModalBtn = document.getElementById('close-un-report-modal');
+
+    closeUnReportModalBtn?.addEventListener('click', () => unReportModal?.close());
+    unReportModal?.addEventListener('click', (e) => {
+        if (e.target === unReportModal) unReportModal.close();
+    });
+
     rsvpForm?.addEventListener('submit', (e) => {
         e.preventDefault();
         rsvpModal?.close();
