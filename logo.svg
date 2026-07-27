@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" class="official-logo-svg">
+    <style>
+        .logo-text {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 800;
+            fill: currentColor;
+            letter-spacing: -1.5px;
+        }
+    </style>
+    <!-- Flag Bar Element -->
+    <!-- Top Black Stripe -->
+    <rect x="24" y="8" width="14" height="82" fill="#1D1D1B" class="top-stripe" />
+    <!-- Bottom Green Stripe -->
+    <rect x="24" y="90" width="14" height="82" fill="#007A3D" />
+    <!-- Red Triangle -->
+    <polygon points="0,50 0,130 58,90" fill="#E4312B" />
+
+    <!-- Text Element -->
+    <text x="76" y="74" font-size="64" class="logo-text">Filistin’e</text>
+    <text x="76" y="152" font-size="64" class="logo-text">Özgürlük</text>
+</svg>
