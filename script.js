@@ -268,6 +268,11 @@ document.addEventListener('DOMContentLoaded', () => {
             author: "Hakan Tahmaz",
             title: "Adil Bir Barış İçin Dayanışma İradesi",
             content: "<p class='lead-text'>Barış, işgalin bittiği ve hakkın sahibine teslim edildiği yerde başlar.</p><p>Filistin halkının meşru direnişi kazanana kadar meydanlarda ve masada dayanışmayı büyüteceğiz.</p>"
+        },
+        'un-guterres-statement': {
+            author: "Birleşmiş Milletler Genel Sekreterliği",
+            title: "BM, İsrail’in Batı Şeria’da yasadışı yerleşim yerlerini genişletmesini sert bir dille kınadı",
+            content: "<p class='lead-text' style='font-size: 1.15rem; font-weight: 700; color: var(--text-primary); line-height: 1.8; margin-bottom: 1rem;'>Birleşmiş Milletler Genel Sekreteri Antonio Guterres, işgal altındaki Batı Şeria’da yerleşim yerlerinin geliştirilmesini hızlandırmaya yönelik İsrail planlarını kınadı.</p><p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);'>Guterres, Pazartesi günü yayınlanan bir açıklamada, Filistin topraklarındaki İsrail yerleşim yerlerinin “hiçbir hukuki geçerliliği olmadığını” ve uluslararası hukukun “bariz bir ihlali” teşkil ettiğini belirtti. Guterres’in bu eleştirisi, Batı Şeria’da İsrail şiddetinin tırmanışa geçmesi ve İsrail’in mevcut yerleşim noktalarını önce gasp edip ardından bu gapsı yasallaştırma ve yenilerini kurma planları sürerken geldi.</p>"
         }
     };
 
