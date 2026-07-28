@@ -18,10 +18,1620 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <!-- Dynamic Reading Progress Bar -->
     <div id="scroll-progress" class="scroll-progress"></div>
+
     <!-- Announcement & Urgent Ticker -->
     <div class="urgent-ticker">
         <div class="ticker-content">
             <span class="ticker-badge"><i class="fa-solid fa-bullhorn"></i> ACİL ÇAĞRI</span>
             <span class="ticker-text">Bu Cumartesi saat 14:00'te Meydan Dayanışma Yürüyüşü ve Stant Nöbeti! Tüm duyarlı yurttaşlar davetlidir.</span>
+            <a href="#eylemler" class="ticker-link">Detayları Gör <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar Section -->
+    <header class="navbar-header" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo" aria-label="Filistin'e Özgürlük Ana Sayfası">
+                <svg viewBox="0 0 420 180" class="official-logo-svg">
+                    <rect x="24" y="8" width="14" height="82" class="top-stripe" />
+                    <rect x="24" y="90" width="14" height="82" fill="#007A3D" />
+                    <polygon points="0,50 0,130 58,90" fill="#E4312B" />
+                    <text x="76" y="74" font-size="64" font-weight="800" class="logo-text">Filistin’e</text>
+                    <text x="76" y="152" font-size="64" font-weight="800" class="logo-text">Özgürlük</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Navigation Menu (Updated Navbar Buttons) -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#gunce" class="nav-link active"><i class="fa-solid fa-newspaper"></i> Günce</a>
+                <a href="#kuresel-intifada" class="nav-link"><i class="fa-solid fa-globe red-text"></i> Küresel İntifada</a>
+                <a href="#vicdan-mahkemesi" class="nav-link"><i class="fa-solid fa-gavel gold-text"></i> Vicdan Mahkemesi</a>
+                <a href="#savasa-hayir" class="nav-link"><i class="fa-solid fa-hand-peace green-text"></i> Savaşa Hayır İnisiyatifi</a>
+                <a href="#arsiv" class="nav-link"><i class="fa-solid fa-box-archive gold-text"></i> Arşiv</a>
+                <a href="#biz-kimiz" class="nav-link"><i class="fa-solid fa-users"></i> Biz Kimiz</a>
+                <a href="#yazarlar" class="nav-link"><i class="fa-solid fa-pen-nib"></i> Yazarlar</a>
+                <a href="#eylemler" class="nav-link"><i class="fa-solid fa-calendar-check"></i> Eylem & Stantlar</a>
+                <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" class="nav-link"><i class="fa-brands fa-youtube red-text"></i> YouTube</a>
+            </nav>
+
+            <!-- Quick Action & Theme Controls -->
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" title="Karanlık / Aydınlık Mod" aria-label="Tema Değiştir">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#eylemler" class="btn btn-primary nav-cta">
+                    <i class="fa-solid fa-hand-holding-heart"></i> Eyleme Katıl
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menüyü Aç/Kapat">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <a href="#" class="brand-logo sm">
+                <svg viewBox="0 0 420 180" class="official-logo-svg">
+                    <rect x="24" y="8" width="14" height="82" class="top-stripe" />
+                    <rect x="24" y="90" width="14" height="82" fill="#007A3D" />
+                    <polygon points="0,50 0,130 58,90" fill="#E4312B" />
+                    <text x="76" y="74" font-size="64" font-weight="800" class="logo-text">Filistin’e</text>
+                    <text x="76" y="152" font-size="64" font-weight="800" class="logo-text">Özgürlük</text>
+                </svg>
+            </a>
+            <button class="drawer-close" id="drawer-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="drawer-nav">
+            <a href="#gunce" class="drawer-link"><i class="fa-solid fa-newspaper"></i> Filistin Güncesi</a>
+            <a href="#kuresel-intifada" class="drawer-link"><i class="fa-solid fa-globe red-text"></i> Küresel İntifada</a>
+            <a href="#vicdan-mahkemesi" class="drawer-link"><i class="fa-solid fa-gavel gold-text"></i> Vicdan Mahkemesi</a>
+            <a href="#savasa-hayir" class="drawer-link"><i class="fa-solid fa-hand-peace green-text"></i> Savaşa Hayır İnisiyatifi</a>
+            <a href="#arsiv" class="drawer-link"><i class="fa-solid fa-box-archive gold-text"></i> Dijital Arşiv</a>
+            <a href="#biz-kimiz" class="drawer-link"><i class="fa-solid fa-users"></i> Biz Kimiz?</a>
+            <a href="#savas-suclari" class="drawer-link"><i class="fa-solid fa-scale-unbalanced-flip"></i> İsrail'in Savaş Suçları</a>
+            <a href="#yazarlar" class="drawer-link"><i class="fa-solid fa-pen-nib"></i> Köşe Yazarları</a>
+            <a href="#boykot-rehberi" class="drawer-link"><i class="fa-solid fa-store-slash"></i> BDS & Boykot Rehberi</a>
+            <a href="#eylemler" class="drawer-link"><i class="fa-solid fa-calendar-check"></i> Eylem & Stant Çağrıları</a>
+            <a href="#tartismalar" class="drawer-link"><i class="fa-brands fa-youtube red-text"></i> YouTube Tartışmaları</a>
+        </nav>
+        <div class="drawer-footer">
+            <a href="#eylemler" class="btn btn-primary btn-block"><i class="fa-solid fa-hand-holding-heart"></i> Eyleme Katıl</a>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+    <main>
+        <!-- Hero Section (Manşet) -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-pattern"></div>
+            <div class="container hero-container">
+                <!-- Eyebrow text -->
+                <div class="hero-badge animate-fade">
+                    <span class="badge-flag-stripe red"></span>
+                    <span class="badge-flag-stripe green"></span>
+                    <span class="badge-flag-stripe white"></span>
+                    <span>Filistin Direnişinin Kazanması için Bir Aradayız</span>
+                </div>
+                
+                <!-- Main Big Title -->
+                <h1 class="hero-title animate-up main-hero-title">
+                    Filistin'e Özgürlük
+                </h1>
+                
+                <!-- Requested Exact Text Under Hero Title -->
+                <p class="hero-description animate-up delay-1">
+                    Filistin'e Özgürlük Platformu; İsrail'in Filistin'de işlediği soykırım suçlarının duyurulması ve durdurulması, küresel intifadanın büyütülmesi için kitlesel eylem ve stant çalışmaları ile Filistin halkının meşru direnişinin yanında duran bağımsız bir dayanışma ağıdır.
+                </p>
+
+                <div class="hero-buttons animate-up delay-2">
+                    <button class="btn btn-primary btn-lg rsvp-btn" onclick="document.getElementById('rsvp-modal')?.showModal();">
+                        <i class="fa-solid fa-bullhorn"></i> Etkinlik ve Stantlara Katıl
+                    </button>
+                    <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" class="btn btn-secondary btn-lg">
+                        <i class="fa-brands fa-youtube red-text"></i> YouTube Yayınlarını İzle
+                    </a>
+                </div>
+
+                <!-- Featured Hero Photo (FÖP Saraçhane eyleminden) -->
+                <div class="hero-rally-wrapper animate-up delay-2" style="margin: 2.5rem 0 3rem;">
+                    <div class="hero-rally-card glass-panel" style="padding: 0.5rem; background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-color);">
+                        <img src="assets/fop_sarachane_eylemi.jpg" alt="FÖP Saraçhane eyleminden" class="hero-rally-img" style="border-radius: var(--radius-md); max-height: 560px; object-fit: cover;">
+                        <div class="hero-rally-caption" style="padding: 0.75rem 1rem 0.25rem; font-size: 1rem; font-weight: 600; color: var(--text-secondary);">
+                            FÖP Saraçhane eyleminden
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Three Hero Feature Cards -->
+                <div class="hero-highlights-grid animate-up delay-3">
+                    <!-- 1. Günün Sözü Kutusu -->
+                    <div class="highlight-card quote-highlight-card glass-card">
+                        <div class="highlight-badge gold-bg"><i class="fa-solid fa-quote-left"></i> GÜNÜN SÖZÜ</div>
+                        <blockquote class="quote-text">
+                            "Gerçekten de Siyonist hareketin kendisi için talep ettiği alan, zulüm gören Yahudileri kurtarma ihtiyacıyla değil, mümkün olduğunca az nüfusla mümkün olduğunca çok Filistin'i ele geçirme arzusuyla belirlendi."
+                        </blockquote>
+                        <div class="quote-author">— Ilan Pappé</div>
+                    </div>
+
+                    <!-- 2. Küresel İntifada Kutusu -->
+                    <div class="highlight-card intifada-highlight-card glass-card">
+                        <div class="highlight-badge red-bg"><i class="fa-solid fa-globe"></i> KÜRESEL İNTİFADA</div>
+                        <h3 class="highlight-title">Küresel Filistin Dayanışma Haberleri</h3>
+                        <p class="highlight-desc">
+                            Dünyanın dört bir yanından üniversite kampları, liman blokajları, sivil toplum boykotları ve kitlesel sokak eylemleri haberleri.
+                        </p>
+                        <a href="#kuresel-intifada" class="btn btn-sm btn-outline-primary" style="margin-top: 0.8rem;">
+                            Dayanışma Haberleri <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 3. İsrail'in Savaş Suçları Kutusu -->
+                    <div class="highlight-card crimes-highlight-card glass-card">
+                        <div class="highlight-badge green-bg"><i class="fa-solid fa-scale-unbalanced-flip"></i> SAVAŞ SUÇLARI DOSYASI</div>
+                        <h3 class="highlight-title">İsrail'in Savaş Suçları ve Delil Arşivi</h3>
+                        <p class="highlight-desc">
+                            Cenevre Sözleşmeleri ihlalleri, sivil altyapı hedeflemeleri ve Lahey Uluslararası Ceza Mahkemesi (UCM) kanıt dosyaları.
+                        </p>
+                        <a href="#savas-suclari" class="btn btn-sm btn-secondary" style="margin-top: 0.8rem;">
+                            Kanıt Dosyasına Git <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Savaşa Hayır İnisiyatifi -->
+        <section class="section savasa-hayir-section dark-surface" id="savasa-hayir">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag green-tag"><i class="fa-solid fa-hand-peace"></i> BARIŞ VE ADALET İRADESİ</span>
+                    <h2 class="section-title">Savaşa Hayır İnisiyatifi</h2>
+                    <p class="section-subtitle">Sömürgeciliğe, işgale ve militarizme karşı halkların kardeşliğini ve barışı savunan aktivistlerin mücadele zeminidir.</p>
+                </div>
+
+                <div class="grid grid-2 align-start" style="align-items: flex-start;">
+                    <div class="about-content glass-panel" style="padding: 2.5rem;">
+                        <p class="lead-text" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.2rem;">
+                            ABD emperyalizmi ve İsrail’in askeri saldırganlığı, nükleer tehditlerin savrulduğu ve şiddet, yıkım, ekosistem ve kitle katliamlarının normalleştirildiği küresel bir boyuta ulaştı. Nakba’dan bugüne Filistin’de süren yerleşimci sömürgecilik ve soykırımcı işgal; ABD-İsrail ortaklığının İran’ı ve Lübnan’ı hedef alan bombardımanlarıyla daha tehlikeli bir aşamaya evrilmiştir.
+                        </p>
+                        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.2rem;">
+                            Küba ve Venezuela’ya yönelik müdahalelerle süren bu yayılmacı kuşatmaya karşı biz aşağıda imzası bulunanlar;
+                        </p>
+                        <ul class="manifesto-list" style="margin-bottom: 1.5rem; font-size: 1.02rem; line-height: 1.7;">
+                            <li><i class="fa-solid fa-circle-dot red-text"></i> ABD ve İsrail’in, İran’a, Lübnan’a ve bölge halklarına yönelik saldırganlığının acilen durdurulmasını talep ediyoruz.</li>
+                            <li><i class="fa-solid fa-circle-dot red-text"></i> Emperyalist odaklara ve bölgesel iktidarlara karşı; İran, Filistin ve tüm ezilen halkların yanında saf tutuyoruz.</li>
+                            <li><i class="fa-solid fa-circle-dot red-text"></i> Savaş baronlarına ve militarizme karşı amasız, fakatsız karşı duruyoruz.</li>
+                            <li><i class="fa-solid fa-circle-dot red-text"></i> Türkiye’nin NATO’dan çıkmasını, iç ve dış politikada barış ve ezilen halklardan yana bir tutumu politikasının omurgası yapmasını talep ediyoruz.</li>
+                        </ul>
+                        
+                        <div class="call-to-action-box" style="background: rgba(0, 122, 61, 0.12); border-left: 4px solid var(--palestine-green); padding: 1.2rem 1.5rem; border-radius: var(--radius-md);">
+                            <p style="font-size: 1.08rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">
+                                Gelin savaşları durdurmak için sesimizi, sözümüzü, birleştirelim.
+                            </p>
+                            <p style="font-size: 1.08rem; font-weight: 700; color: #10B981; margin: 0;">
+                                Gelin yeni bir savaş karşıtı mücadelenin zeminini birlikte inşa edelim.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="manifesto-card glass-panel" style="padding: 2.5rem;">
+                        <div class="manifesto-img-box" style="margin-bottom: 1.5rem; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color);">
+                            <img src="assets/fop_31_aralik_2023.png" alt="Savaşa Hayır İnisiyatifi FÖP 31 Aralık 2023 Eylemi" style="width: 100%; height: auto; display: block;">
+                        </div>
+                        <h3 class="manifesto-title"><i class="fa-solid fa-hand-peace green-text"></i> İnisiyatif Bildirgesi ve Çağrılar</h3>
+                        <ul class="manifesto-list">
+                            <li><i class="fa-solid fa-check-double green-text"></i> İsrail'e ve mazlumlara savaş açanlara silah ticareti ve askeri sevkiyatlara karşı mücadele</li>
+                            <li><i class="fa-solid fa-check-double green-text"></i> ABD ve NATO'ya karşı aralıksız mücadele</li>
+                            <li><i class="fa-solid fa-check-double green-text"></i> Uluslararası Savaş Karşıtı Platformlarla Ortak Eylem Ağlarının İnşası</li>
+                        </ul>
+                        <div class="manifesto-footer" style="margin-top: 2rem;">
+                            <a href="assets/savasa_hayir_deklarasyonu.pdf" download="Savasa_Hayir_Deklarasyonu.pdf" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-file-pdf"></i> İnisiyatif Deklarasyonunu İndir (.PDF)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Dijital Filistin Arşivi (Requested Navbar Section) -->
+        <section class="section arsiv-section" id="arsiv">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag gold-tag"><i class="fa-solid fa-box-archive"></i> DİJİTAL BELGE MERKEZİ</span>
+                    <h2 class="section-title">Dijital Filistin Arşivi</h2>
+                    <p class="section-subtitle">Tarihi raporlar, uluslararası anlaşmalar, haritalar, akademik makaleler ve medya vesikaları kütüphanesi.</p>
+                </div>
+
+                <div class="archive-controls">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="archive-search" placeholder="Arşivde belge, rapor veya anahtar kelime ara (Örn: BM, BMCHR, Harita, BDS)...">
+                    </div>
+                    <div class="archive-tags">
+                        <button class="tag-btn active" data-archive-tag="all">Tüm Dokümanlar</button>
+                        <button class="tag-btn" data-archive-tag="rapor">BM & İnsan Hakları Raporları</button>
+                        <button class="tag-btn" data-archive-tag="hukuk">Hukuki Metinler</button>
+                        <button class="tag-btn" data-archive-tag="kitap">Kitap & Makale</button>
+                    </div>
+                </div>
+
+                <div class="archive-grid" id="archive-grid">
+                    <div class="archive-card" data-tags="rapor hukuk">
+                        <div class="archive-icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="archive-content">
+                            <span class="doc-type-badge">BM Raporu • PDF (OHCHR)</span>
+                            <h3 class="doc-title">
+                                <a href="#" class="un-report-trigger-link" style="color: inherit; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--palestine-red)'" onmouseout="this.style.color='inherit'" onclick="event.preventDefault(); document.getElementById('un-report-modal')?.showModal();">
+                                    A/HRC/61/71: İşkence ve soykırım – 1967’den beri işgal altındaki Filistin topraklarındaki insan hakları durumuna ilişkin Özel Raportörün raporu <i class="fa-solid fa-up-right-from-square" style="font-size: 0.8rem; margin-left: 0.3rem; opacity: 0.7;"></i>
+                                </a>
+                            </h3>
+                            <p class="doc-desc">19 Şubat 2026 • Bu rapor, 7 Ekim 2023 tarihinden bu yana işgal altındaki Filistin topraklarından gelen Filistinlilere karşı İsrail’in sistematik işkence uygulamalarını incelemektedir...</p>
+                            <div class="doc-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 19 Şubat 2026</span>
+                                <span><i class="fa-solid fa-file-pdf"></i> OHCHR Raporu</span>
+                                <span><i class="fa-solid fa-globe"></i> BM İnsan Hakları Konseyi</span>
+                            </div>
+                        </div>
+                        <div class="archive-action">
+                            <button class="btn btn-sm btn-outline-primary un-report-trigger-btn" onclick="document.getElementById('un-report-modal')?.showModal();">
+                                <i class="fa-solid fa-book-open"></i> Raporu Oku
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="archive-card" data-tags="hukuk haber">
+                        <div class="archive-icon law"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
+                        <div class="archive-content">
+                            <span class="doc-type-badge">Hukuki Analiz • PDF</span>
+                            <h3 class="doc-title">
+                                <a href="assets/UAD_Gecici_Tedbir_Karari_Haberi.pdf" target="_blank" download="UAD_Gecici_Tedbir_Karari_Haberi.pdf" style="color: inherit; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--palestine-red)'" onmouseout="this.style.color='inherit'">
+                                    Uluslararası Adalet Divanı (UAD) Geçici Tedbir Kararı Haberi <i class="fa-solid fa-up-right-from-square" style="font-size: 0.8rem; margin-left: 0.3rem; opacity: 0.7;"></i>
+                                </a>
+                            </h3>
+                            <p class="doc-desc">Uluslararası Adalet Divanı'nın (ICJ) 26 Ocak 2024 tarihli kararına ilişkin "İsrail Gazze'de soykırımı önlemek için tüm tedbirleri almak zorunda" başlıklı detaylı haber ve hukuki analiz metni.</p>
+                            <div class="doc-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 26 Ocak 2024</span>
+                                <span><i class="fa-solid fa-download"></i> 28.9 bin İndirme</span>
+                                <span><i class="fa-solid fa-hard-drive"></i> PDF</span>
+                            </div>
+                        </div>
+                        <div class="archive-action">
+                            <a href="assets/UAD_Gecici_Tedbir_Karari_Haberi.pdf" download="UAD_Gecici_Tedbir_Karari_Haberi.pdf" class="btn btn-sm btn-outline-primary">
+                                <i class="fa-solid fa-download"></i> İndir (.PDF)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Küresel İntifada -->
+        <section class="section intifada-section dark-surface" id="kuresel-intifada">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag red-tag"><i class="fa-solid fa-earth-americas"></i> DÜNYADAN SESLER</span>
+                    <h2 class="section-title">Küresel İntifada ve Dünya Dayanışma Haberleri</h2>
+                    <p class="section-subtitle">Beş kıtada büyüyen üniversite nöbetleri, liman blokajları, kitlesel yürüyüşler ve halkların ortak direniş haberleri.</p>
+                </div>
+
+                <!-- Featured Küresel İntifada Crowd Image (Second Uploaded Image) -->
+                <div class="intifada-featured-wrapper" style="margin-bottom: 2.5rem;">
+                    <div class="glass-panel" style="padding: 0.75rem; overflow: hidden;">
+                        <img src="assets/kuresel_intifada_crowd.jpg" alt="Küresel İntifada - Dünya Geneli Kitlesel Dayanışma Mitingi" style="width: 100%; height: auto; max-height: 480px; object-fit: cover; border-radius: var(--radius-md); display: block;">
+                        <div class="hero-rally-caption" style="padding: 0.75rem 1rem 0.25rem;">
+                            <span class="badge-flag-stripe red"></span>
+                            <span class="badge-flag-stripe green"></span>
+                            <span><strong>KÜRESEL İNTİFADA:</strong> "Beş Kıtada Filistin Bayraklarıyla Büyüyen Kitlesel Halk Dayanışması"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="news-card glass-card">
+                        <div class="card-media">
+                            <div class="card-badge red">Avrupa & Dünya</div>
+                            <img src="assets/kuresel_intifada_crowd.jpg" alt="Küresel Mitingler">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> Dünya Başkentleri</span>
+                                <span><i class="fa-regular fa-clock"></i> Bugün</span>
+                            </div>
+                            <h3 class="card-title">Dünya Başkentlerinde Yüz Binlerin Katıldığı Dev Mitingler</h3>
+                            <p class="card-excerpt">Milyonlarca yurttaş Filistin bayraklarıyla meydanlara inerek İsrail ve destekçilerine karşı kitlesel protestolar düzenliyor.</p>
+                            <button class="btn-read-more" onclick="alert('Küresel İntifada Haber Detayı: Dünya genelindeki eylem raporu okundu.');">Detayları Gör <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="news-card glass-card">
+                        <div class="card-media">
+                            <div class="card-badge green">Kuzey Amerika</div>
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Kampüs Eylemleri">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> ABD & Kanada</span>
+                                <span><i class="fa-regular fa-clock"></i> Dün</span>
+                            </div>
+                            <h3 class="card-title">Üniversite Kampüslerinde Özgür Filistin Çadır Nöbetleri Büyüyor</h3>
+                            <p class="card-excerpt">Öğrenciler ve akademisyenler işgalci şirketlerle yapılan akademik ve finansal bağların kesilmesi talebiyle nöbet eylemlerini sürdürüyor.</p>
+                            <button class="btn-read-more" onclick="alert('Küresel İntifada Haber Detayı: Kampüs direnişleri raporu okundu.');">Detayları Gör <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="news-card glass-card">
+                        <div class="card-media">
+                            <div class="card-badge dark">Güney Amerika & Asya</div>
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Liman Blokajları">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> Küresel Limanlar</span>
+                                <span><i class="fa-regular fa-clock"></i> 2 gün önce</span>
+                            </div>
+                            <h3 class="card-title">Liman İşçilerinden İsrail Gemilerine Boykot ve Blokaj Eylemleri</h3>
+                            <p class="card-excerpt">Uluslararası liman sendikaları, askeri mühimmat taşıyan kargo gemilerini yüklemeyi reddederek doğrudan eylem başlattı.</p>
+                            <button class="btn-read-more" onclick="alert('Küresel İntifada Haber Detayı: Liman işçileri blokaj haberi okundu.');">Detayları Gör <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- SECTION: Vicdan Mahkemesi (Dedicated Requested Section) -->
+        <section class="section vicdan-mahkemesi-section dark-surface" id="vicdan-mahkemesi">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag gold-tag"><i class="fa-solid fa-gavel"></i> SİMGESEL ULUSLARARASI YARGILAMA</span>
+                    <h2 class="section-title">Vicdan Mahkemesi (23-24 Mart 2024)</h2>
+                    <p class="section-subtitle">İsrail'in soykırım ve savaş suçlarını belgeleme, tanıklık etme ve kamuoyu önünde yargılama girişimi.</p>
+                </div>
+
+                <!-- Showcase Poster Image Only -->
+                <div class="glass-panel text-center" style="padding: 1.5rem; margin-bottom: 2.5rem; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <div style="max-width: 680px; width: 100%; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 12px 35px rgba(0,0,0,0.6); background: #131A26;">
+                        <img src="assets/vicdan_mahkemesi_15_masa_poster.png" alt="Vicdan Mahkemesi 15 Masa 15 Suç Dosyası Afişi" style="width: 100%; height: auto; max-height: 540px; object-fit: contain; display: block;">
+                    </div>
+                </div>
+
+                <!-- Document Files Download Grid -->
+                <div class="section-header text-center" id="vicdan-belgeler" style="margin-bottom: 2rem; scroll-margin-top: 100px;">
+                    <h3 class="section-title" style="font-size: 1.6rem;"><i class="fa-solid fa-folder-open gold-text"></i> Vicdan Mahkemesi Belge ve İddianame Dosyaları</h3>
+                    <p class="section-subtitle">Aşağıdaki butonlara tıklayarak belgeleri PDF olarak indirebilirsiniz.</p>
+                </div>
+
+                <div class="grid grid-2" style="gap: 1.5rem; margin-bottom: 3rem;">
+                    <!-- Doc 1: 24 Sayfa Tam Kitapçık Raporu -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #F59E0B;"><i class="fa-solid fa-book-bookmark"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Vicdan Mahkemesi Raporu (24 Sayfalık Kitapçık)</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">15 Masa Suç Dosyaları, İddianame ve Karar Metni (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_mahkemesi_raporu_2024.pdf" download="Vicdan_Mahkemesi_Raporu_24_03_2024.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 2: 15 Masa Sunum Özeti -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: var(--palestine-red);"><i class="fa-solid fa-file-pdf"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Vicdan Mahkemesi 15 Masa Özeti</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">15 Çalışma Masası Suç Raporları ve Basın Açıklaması (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_mahkemesi_15_masa_ozeti.pdf" download="Vicdan_Mahkemesi_15_Masa_Ozeti.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 3: İddianame Tam Metni -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #F59E0B;"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Vicdan Mahkemesi İddianamesi</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Filistin'e Özgürlük Platformu Resmi İddianame Metni (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_mahkemesi_iddianamesi_tam_metni.pdf" download="Vicdan_Mahkemesi_Iddianamesi.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 4: Sağlık Masası Raporu -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #10B981;"><i class="fa-solid fa-notes-medical"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Sağlık Masası Raporu</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">İşgalin Gazze'de İnsan Yaşamı ve Sağlık Sistemine Yıkıcı Etkisi (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_saglik_masasi.pdf" download="Vicdan_Mahkemesi_Saglik_Masasi_Raporu.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 5: Psikolojik Sağlık Masası Raporu -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #EC4899;"><i class="fa-solid fa-brain"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Psikolojik Sağlık Masası Raporu</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">İsrail'in Gazze'ye Saldırılarının Psikolojik Sağlık Üzerine Etkileri (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_psikolojik_saglik_masasi.pdf" download="Vicdan_Mahkemesi_Psikolojik_Saglik_Masasi_Raporu.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 5: Mekân Çalışmaları Grubu Raporu -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #8B5CF6;"><i class="fa-solid fa-building-circle-xmark"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Mekân Çalışmaları Grubu Raporu</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">İsrail'in Gazze Saldırılarının Mekânsal Boyutu (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_mekan_calismalari_masasi.pdf" download="Vicdan_Mahkemesi_Mekan_Calismalari_Raporu.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 6: Hayvan Hakları Aktivistleri Masası Raporu -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #EC4899;"><i class="fa-solid fa-paw"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Hayvan Hakları Aktivistleri Masası Raporu</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">İsrail Soykırım Raporu & Biyoçeşitlilik Tahribatı (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_hayvan_haklari_masasi.pdf" download="Vicdan_Mahkemesi_Hayvan_Haklari_Raporu.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 7: Sanatçılar Masası Soykırım Raporu -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #10B981;"><i class="fa-solid fa-palette"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Sanatçılar Masası Soykırım Raporu</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Filistin Kültür ve Sanat Dünyasına Yönelik Soykırım ve Tahribat (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_sanatcilar_masasi.pdf" download="Vicdan_Mahkemesi_Sanatcilar_Masasi_Raporu.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 8: Sinema ve Belgeselciler Masası Sunumu -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #F59E0B;"><i class="fa-solid fa-video"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Sinema ve Belgeselciler Masası Sunumu</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Filistin Sinemasında Direniş'in İzleri & Kültürel Soykırım Analizi (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_sinema_ve_belgeselciler_masasi.pdf" download="Vicdan_Mahkemesi_Sinema_ve_Belgeselciler_Masasi_Sunumu.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 9: Çocuk Masası Sunumu -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #3B82F6;"><i class="fa-solid fa-child-reaching"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Çocuk Masası Sunumu</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">İsrail'in Gazze'deki Savaşının Çocuklar Üzerindeki Etkisi (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_cocuk_masasi.pdf" download="Vicdan_Mahkemesi_Cocuk_Masasi_Sunumu.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 10: Kadın ve LGBTİ+ Masası Sunumu -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #EC4899;"><i class="fa-solid fa-venus"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Kadın ve LGBTİ+ Masası Sunumu</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Kadın ve LGBTİ+ Özgürleşmesinin Araçsallaştırılması ve Hak İhlalleri (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_kadin_lgbti_masasi.pdf" download="Vicdan_Mahkemesi_Kadin_ve_LGBTI_Masasi_Sunumu.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 11: Müzik Emekçileri Masası Sunumu -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #8B5CF6;"><i class="fa-solid fa-music"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Müzik Emekçileri Masası Sunumu</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Filistin Müzik Kültürüne ve Müzisyenlere Yönelik Saldırı ve Tahribat (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_muzik_emekcileri_masasi.pdf" download="Vicdan_Mahkemesi_Muzik_Emekcileri_Masasi_Sunumu.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 12: İklim Adaleti Masası Sunumu -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #10B981;"><i class="fa-solid fa-seedling"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Su, Toprak, Yaşam ve İklim Adaleti Masası Sunumu</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Eko-kırımdan Soy-kırıma: İsrail Devleti'nin Suç Dosyası (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_iklim_adaleti_masasi.pdf" download="Vicdan_Mahkemesi_Iklim_Adaleti_Masasi_Sunumu.pdf" class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-download"></i> İndir (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 7: English Panel Judgement -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #3B82F6;"><i class="fa-solid fa-file-pdf"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">🇬🇧 People's Tribunal Panel Judgement</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Official English Verdict & Panel Declaration (.PDF)</p>
+                            </div>
+                        </div>
+                        <a href="assets/vicdan_mahkemesi_karari_EN.pdf" download="Peoples_Tribunal_Panel_Judgement_EN.pdf" class="btn btn-sm btn-secondary">
+                            <i class="fa-solid fa-download"></i> Download (.PDF)
+                        </a>
+                    </div>
+
+                    <!-- Doc 10: YouTube Live Broadcast Video Redirection -->
+                    <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 240px;">
+                            <div style="font-size: 2.2rem; color: #EF4444;"><i class="fa-brands fa-youtube"></i></div>
+                            <div>
+                                <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem;">Duruşma Canlı Yayın Video Arşivi</h4>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Vicdan Mahkemesi Duruşması Tam Video Kayıtları</p>
+                            </div>
+                        </div>
+                        <a href="https://www.youtube.com/live/3cCG3NfQhHM?si=ve5C8WaJSZv09Xic" target="_blank" class="btn btn-sm btn-outline-primary">
+                            <i class="fa-brands fa-youtube"></i> YouTube'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Infographics Gallery (Saha Verileri ve İnfografikler) -->
+                <div class="section-header text-center" style="margin-bottom: 2rem;">
+                    <h3 class="section-title" style="font-size: 1.6rem;"><i class="fa-solid fa-chart-pie gold-text"></i> Mahkemeye Sunulan İnfografik ve Delil Görselleri</h3>
+                    <p class="section-subtitle">Saha raporları, insan hakları verileri ve toplumsal travma analizleri.</p>
+                </div>
+
+                <div class="grid grid-2" style="gap: 1.5rem; margin-bottom: 3rem;">
+                    <div class="glass-card" style="padding: 1rem; text-align: center;">
+                        <img src="assets/vicdan_infografik_euromed_soykirim.jpg" alt="Euro-Med Human Rights Monitor Day 160 Genocide Infographic" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 0.8rem;">
+                        <h4 style="font-size: 1.05rem; font-weight: 700;">Euro-Med Monitor 160. Gün Gazze Soykırımı Verileri</h4>
+                    </div>
+                    <div class="glass-card" style="padding: 1rem; text-align: center;">
+                        <img src="assets/vicdan_infografik_shifa_trauma.jpg" alt="SHIFA Project Palestinian Collective Trauma Infographic" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 0.8rem;">
+                        <h4 style="font-size: 1.05rem; font-weight: 700;">SHIFA Project Filistin Kolektif Travma Analizi</h4>
+                    </div>
+                </div>
+
+                <!-- Speakers & Witnesses Grid (Tanıklıklar ve Konuşmacılar) -->
+                <div class="section-header text-center" style="margin-bottom: 2rem;">
+                    <h3 class="section-title" style="font-size: 1.6rem;"><i class="fa-solid fa-microphone-lines gold-text"></i> Tanıklıklar ve Uluslararası Konuşmacılar</h3>
+                    <p class="section-subtitle">Vicdan Mahkemesi'nde dinlenen tanıklar, akademisyenler ve uluslararası hukukçuların sunumları.</p>
+                </div>
+
+                <div class="grid grid-4" style="gap: 1.5rem;">
+                    <!-- Speaker 1: Alex Callinicos -->
+                    <div class="speaker-card glass-card text-center" style="padding: 1rem; border-radius: var(--radius-md);">
+                        <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+                            <div style="overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 0.8rem; position: relative;">
+                                <img src="assets/vicdan_tanik_alex_callinicos.jpg" alt="Alex Callinicos SWP" style="width: 100%; height: auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <div style="position: absolute; bottom: 0.5rem; right: 0.5rem; background: rgba(228, 49, 43, 0.9); color: white; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 700;">
+                                    <i class="fa-brands fa-youtube"></i> İZLE
+                                </div>
+                            </div>
+                            <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem;">Alex Callinicos</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">İngiltere Sosyalist İşçi Partisi (SWP)</p>
+                        </a>
+                    </div>
+
+                    <!-- Speaker 2: Dr. Ghassan Abu Sittah -->
+                    <div class="speaker-card glass-card text-center" style="padding: 1rem; border-radius: var(--radius-md);">
+                        <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+                            <div style="overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 0.8rem; position: relative;">
+                                <img src="assets/vicdan_tanik_ghassan_abu_sittah.png" alt="Dr. Ghassan Abu Sittah" style="width: 100%; height: auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <div style="position: absolute; bottom: 0.5rem; right: 0.5rem; background: rgba(228, 49, 43, 0.9); color: white; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 700;">
+                                    <i class="fa-brands fa-youtube"></i> İZLE
+                                </div>
+                            </div>
+                            <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem;">Dr. Ghassan Abu Sittah</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Gazze Soykırımı Görgü Tanığı & Cerrah</p>
+                        </a>
+                    </div>
+
+                    <!-- Speaker 3: Khaled Al-Shouli -->
+                    <div class="speaker-card glass-card text-center" style="padding: 1rem; border-radius: var(--radius-md);">
+                        <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+                            <div style="overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 0.8rem; position: relative;">
+                                <img src="assets/vicdan_tanik_khaled_al_shouli.png" alt="Khaled Al-Shouli" style="width: 100%; height: auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <div style="position: absolute; bottom: 0.5rem; right: 0.5rem; background: rgba(228, 49, 43, 0.9); color: white; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 700;">
+                                    <i class="fa-brands fa-youtube"></i> İZLE
+                                </div>
+                            </div>
+                            <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem;">Khaled Al Shouli</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Güney Afrika Heyeti Hukukçusu</p>
+                        </a>
+                    </div>
+
+                    <!-- Speaker 4: Amjad Salfiti -->
+                    <div class="speaker-card glass-card text-center" style="padding: 1rem; border-radius: var(--radius-md);">
+                        <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+                            <div style="overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 0.8rem; position: relative;">
+                                <img src="assets/vicdan_tanik_amjad_salfiti.png" alt="Amjad Salfiti" style="width: 100%; height: auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <div style="position: absolute; bottom: 0.5rem; right: 0.5rem; background: rgba(228, 49, 43, 0.9); color: white; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 700;">
+                                    <i class="fa-brands fa-youtube"></i> İZLE
+                                </div>
+                            </div>
+                            <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem;">Amjad Salfiti</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Filistinli Uluslararası Hukukçu</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: İsrail'in Savaş Suçları -->
+        <section class="section savas-suclari-section" id="savas-suclari">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag dark-tag"><i class="fa-solid fa-scale-unbalanced-flip"></i> CEZASIZLIKLA MÜCADELE</span>
+                    <h2 class="section-title">İsrail'in Savaş Suçları Dosyası</h2>
+                    <p class="section-subtitle">Cenevre Sözleşmesi, Roma Statüsü ve UAD kararları ışığında belgelenen uluslararası suçlar.</p>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="boycott-card glass-card">
+                        <div class="boycott-status-badge alert-red"><i class="fa-solid fa-file-circle-exclamation"></i> 1. Cenevre İhlali</div>
+                        <h3 class="brand-name">Sivil Yerleşim ve Altyapı Hedeflemeleri</h3>
+                        <p class="boycott-reason">Hastane, okul, su tesisi ve fırınların sistemli olarak hedef alınması evrensel insancıl hukuka göre savaş suçudur.</p>
+                        <div class="alternative-box">
+                            <strong><i class="fa-solid fa-scale-balanced green-text"></i> Hukuki Dayanak:</strong> 1949 Cenevre Sözleşmesi 53. Madde.
+                        </div>
+                    </div>
+
+                    <div class="boycott-card glass-card">
+                        <div class="boycott-status-badge alert-red"><i class="fa-solid fa-file-circle-exclamation"></i> 2. Roma Statüsü İhlali</div>
+                        <h3 class="brand-name">Zorla Yerinden Etme ve Tehcir</h3>
+                        <p class="boycott-reason">Sivil nüfusun toplu olarak güvenli olmayan bölgelere sürülmesi uluslararası ceza hukukunda insanlığa karşı suç teşkil eder.</p>
+                        <div class="alternative-box">
+                            <strong><i class="fa-solid fa-scale-balanced green-text"></i> Hukuki Dayanak:</strong> UCM Roma Statüsü 7. ve 8. Maddeleri.
+                        </div>
+                    </div>
+
+                    <div class="boycott-card glass-card">
+                        <div class="boycott-status-badge alert-red"><i class="fa-solid fa-file-circle-exclamation"></i> 3. UAD Kararı İhlali</div>
+                        <h3 class="brand-name">İnsani Yardımların Engellenmesi</h3>
+                        <p class="boycott-reason">Gıda, tıbbi malzeme ve temiz su geçişlerinin kısıtlanması Uluslararası Adalet Divanı geçici tedbir kararlarının açık ihlalidir.</p>
+                        <div class="alternative-box">
+                            <strong><i class="fa-solid fa-scale-balanced green-text"></i> Hukuki Dayanak:</strong> UAD 2024 Lahey İhtiyati Tedbir Kararları.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: Filistin Güncesi -->
+        <section class="section gunce-section dark-surface" id="gunce">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag red-tag"><i class="fa-solid fa-circle-dot"></i> CANLI AKIŞ</span>
+                    <h2 class="section-title">Filistin Güncesi</h2>
+                    <p class="section-subtitle">Sahadan doğrudan bilgi, uluslararası raporlar ve günlük insani durum analizleri.</p>
+                </div>
+
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">Tümü</button>
+                    <button class="filter-btn" data-filter="haber">Haberler</button>
+                    <button class="filter-btn" data-filter="rapor">Saha Raporları</button>
+                    <button class="filter-btn" data-filter="analiz">Politik Analiz</button>
+                    <button class="filter-btn" data-filter="kultur">Kültür & Direniş</button>
+                </div>
+
+                <div class="news-grid" id="news-grid">
+                    <article class="news-card feature-card" data-category="haber">
+                        <div class="card-media">
+                            <div class="card-badge red">Son Dakika</div>
+                            <img src="assets/son_dakika_eylem_foto.jpg" alt="BM, İsrail’in Batı Şeria’da yasadışı yerleşim yerlerini genişletmesini sert bir dille kınadı" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Güncel Gelişme</span>
+                                <span><i class="fa-regular fa-clock"></i> 3 dk okuma</span>
+                            </div>
+                            <h3 class="card-title">BM, İsrail’in Batı Şeria’da yasadışı yerleşim yerlerini genişletmesini sert bir dille kınadı</h3>
+                            <p class="card-excerpt">Birleşmiş Milletler Genel Sekreteri Antonio Guterres, işgal altındaki Batı Şeria’da yerleşim yerlerinin geliştirilmesini hızlandırmaya yönelik İsrail planlarını kınadı.</p>
+                            <button class="btn-read-more" data-writer="un-guterres-statement">Devamını Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="rapor">
+                        <div class="card-media">
+                            <div class="card-badge green">Saha Raporu</div>
+                            <img src="assets/gunce_yerlesimci_saldirilari.jpg" alt="İsrailli Yerleşimci Saldırıları" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 28 Temmuz 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 4 dk okuma</span>
+                            </div>
+                            <h3 class="card-title">
+                                <a href="javascript:void(0)" class="read-article-link" data-writer="westbank-settler-attacks" style="color: inherit; text-decoration: none;">Filistinliler, İsrailli yerleşimcilerin Batı Şeria'da camileri, arabaları ve tarım arazilerini ateşe verdiğini anlatıyor</a>
+                            </h3>
+                            <p class="card-excerpt">Filistinli yetkililer, İsrailli yerleşimcilerin işgal altındaki Batı Şeria'da iki camiyi, ayrıca arabaları ve tarım arazilerini ateşe verdiğini, bölgedeki gerilimin tırmanmaya devam ettiğini söylüyor.</p>
+                            <button class="btn-read-more" data-writer="westbank-settler-attacks">Devamını Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="analiz">
+                        <div class="card-media">
+                            <div class="card-badge dark">Politik Analiz</div>
+                            <img src="assets/gunce_politik_analiz_ateskes.jpg" alt="İsrail Ateşkes Günlerinde 1200 Filistinliyi Öldürdü" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 28 Temmuz 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 7 dk okuma</span>
+                            </div>
+                            <h3 class="card-title">
+                                <a href="javascript:void(0)" class="read-article-link" data-writer="israil-ateskes-analizi" style="color: inherit; text-decoration: none;">İsrail Ateşkes Günlerinde 1200 Filistinliyi Öldürdü</a>
+                            </h3>
+                            <p class="card-excerpt">İran'la olan ateşkesin bozulması ve ABD’nin saldırılara devam etmesi beraberinde bölgesel tansiyonun yükselmesini ve Yemen'e kadar uzanmasını getirdi. İran bölgedeki ABD askeri üslerine karşı eylemler gerçekleştirirken bölge halklarını ABD ordusuna karşı eylemler yapmaya ve onu bölgeden kovmaya çağırdı.</p>
+                            <button class="btn-read-more" data-writer="israil-ateskes-analizi">Devamını Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Biz Kimiz -->
+        <section class="section biz-kimiz-section" id="biz-kimiz">
+            <div class="container">
+                <div class="section-header text-center" style="margin-bottom: 2.5rem;">
+                    <span class="section-tag green-tag"><i class="fa-solid fa-hand-holding-heart"></i> HAKKIMIZDA</span>
+                    <h2 class="section-title">Biz Kimiz?</h2>
+                    <p class="section-subtitle red-text font-weight-bold" style="font-size: 1.3rem; font-weight: 800; margin-top: 0.5rem; color: var(--palestine-red);">
+                        Gazze için kaybedecek tek bir saniyemiz bile yok
+                    </p>
+                </div>
+
+                <div class="grid grid-2 align-center">
+                    <div class="about-content glass-panel" style="padding: 2.5rem;">
+                        <p class="lead-text" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.2rem;">
+                            <strong>Filistin’e Özgürlük Platformu</strong> olarak bizler Filistin’e yönelik İsrail ablukasına karşı birleşik bir mücadele için yola çıktık. İlk eylemimizi Filistin halkının özgürlük mücadelesinde tarihi bir dönüm noktası olan Birinci İntifadanın yıldönümünde, 9 Aralık Cumartesi günü Kadıköy’de bir insan zinciri kurarak gerçekleştirdik.
+                        </p>
+                        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.2rem;">
+                            ABD ve Londra’da dev eylemler örgütleniyor. Bu eylemlerin tüm ülkelere aynı kitlesellikle yayılması, İsrail ve ABD’nin Gazze’de çalışan katliam şebekesini durdurmak için atılacak en önemli adımdır. Tüm ülkelerde Filistin’le dayanışan insanların yığınsal eylemleri, Filistin halkının uzattığı dayanışma elini tutmak çok büyük bir önem taşıyor.
+                        </p>
+                        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.2rem;">
+                            Türkiye’de de milyonların savaş karşıtı öfkesine kanal olmak üzere, siyasal kutuplaşmayı aşan bir başlangıç yapmak için yola çıkıyor ve tüm sivil toplum kuruluşlarını, sendikaları, barışı savunan ve ırkçılığa karşı olan herkesi İsrail’in savaş suçlarıyla dolu işgaline karşı yan yana gelmeye, ses çıkarmaya çağırıyoruz.
+                        </p>
+                        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.2rem;">
+                            Filistin’e Özgürlük girişimini başlatan bizler, Türkiye’nin bir yandan Filistin halkının yanında gibi görünüyorken bir yandan da devletin İsrail’le ikili ilişkileri ve ticari iş birliklerini sürdürmesine karşıyız. Fakat İsrail'e karşı çıkarken, genel olarak Yahudileri, özel olarak da Türkiyeli Yahudileri suçlayan, ırkçılık yapan ve antisemitist yaklaşımları benimseyenlere de ses çıkarıyoruz.
+                        </p>
+                        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                            Toplumun çok çeşitli kesimlerinden bir araya gelenlerin oluşturduğu bir platform olarak herkesi bu girişimin aktif bir parçası olmaya çağırıyoruz.
+                        </p>
+
+                        <div class="call-to-action-box" style="background: rgba(228, 49, 43, 0.12); border-left: 4px solid var(--palestine-red); padding: 1.2rem 1.5rem; border-radius: var(--radius-md);">
+                            <h4 style="color: var(--palestine-red); font-size: 1.3rem; font-weight: 800; margin-bottom: 0.4rem;">
+                                <i class="fa-solid fa-bullhorn"></i> Soykırımı durduralım!
+                            </h4>
+                            <h4 style="color: #10B981; font-size: 1.3rem; font-weight: 800; margin: 0;">
+                                <i class="fa-solid fa-scale-balanced"></i> Savaş suçlularını yargılayalım!
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="manifesto-card glass-panel">
+                        <div class="manifesto-img-box" style="margin-bottom: 1.5rem; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color);">
+                            <img src="assets/biz_kimiz_hepimiz_filistinliyiz.jpg" alt="Hepimiz Filistinliyiz - We Are All Palestinians Eylemi" style="width: 100%; height: auto; display: block;">
+                        </div>
+                        <h3 class="manifesto-title"><i class="fa-solid fa-scroll"></i> Platform İlkelerimiz</h3>
+                        <ul class="manifesto-list">
+                            <li><i class="fa-solid fa-check-double green-text"></i> Filistin direnişinin meşru kazanımını ve halkının kendi kaderini tayin hakkını koşulsuz savunur.</li>
+                            <li><i class="fa-solid fa-check-double green-text"></i> İnsan hakları ihlallerine karşı ırk, din ve etnisite ayrımı gözetmeksizin durur.</li>
+                            <li><i class="fa-solid fa-check-double green-text"></i> Küresel barışın ancak işgalin sona ermesi ve adaletin tecellisiyle mümkün olduğuna inanır.</li>
+                            <li><i class="fa-solid fa-check-double green-text"></i> Bağımsız, kar amacı gütmeyen ve gönüllülük esasına dayalı bir yapıdır.</li>
+                        </ul>
+                        <div class="manifesto-footer">
+                            <a href="#eylemler" class="btn btn-outline-light btn-block"><i class="fa-solid fa-user-plus"></i> Platforma Gönüllü Ol</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Köşe Yazarları (10 Columnists) -->
+        <section class="section yazarlar-section dark-surface" id="yazarlar">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag dark-tag"><i class="fa-solid fa-pen-nib"></i> FİKİR VE ANALİZ</span>
+                    <h2 class="section-title">Köşe Yazarları</h2>
+                    <p class="section-subtitle">Düşünürler, araştırmacılar, yazarlar ve aktivistlerden derinlemesine fikir ve perspektifler.</p>
+                </div>
+
+                <div class="writers-grid 10-writers-grid">
+                    <div class="writer-card glass-card">
+                        <div class="writer-header">
+                            <div class="writer-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">Fatma Akdokur</h3>
+                                <span class="writer-role">Yazar & Araştırmacı</span>
+                            </div>
+                        </div>
+                        <div class="writer-quote">"Toplumsal hafızamızı canlı tutmak, adalet arayışımızın sarsılmaz temelidir."</div>
+                        <div class="latest-article-box">
+                            <span class="article-label">Son Yazısı:</span>
+                            <h4 class="article-title">Toplumsal Vicdan ve İnsani Dayanışma Kaleleri</h4>
+                            <button class="btn btn-link read-author-btn" data-writer="fatma-akdokur">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="writer-card glass-card">
+                        <div class="writer-header">
+                            <div class="writer-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">Ümit Aktaş</h3>
+                                <span class="writer-role">Düşünür & Yazar</span>
+                            </div>
+                        </div>
+                        <div class="writer-quote">"Özgürlük, teslim olmayan fikirlerin eyleme dönüşmüş halidir."</div>
+                        <div class="latest-article-box">
+                            <span class="article-label">Son Yazısı:</span>
+                            <h4 class="article-title">Direniş Ahlakı ve Küresel Özgürlük Felsefesi</h4>
+                            <button class="btn btn-link read-author-btn" data-writer="umit-aktas">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="writer-card glass-card">
+                        <div class="writer-header">
+                            <div class="writer-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">Melek Ulagay</h3>
+                                <span class="writer-role">Belgeselci & Yazar</span>
+                            </div>
+                        </div>
+                        <div class="writer-quote">"Görsel tarih ve tanıklıklar, unutturulmak istenen hakikatin mühürleridir."</div>
+                        <div class="latest-article-box">
+                            <span class="article-label">Son Yazısı:</span>
+                            <h4 class="article-title">Kamera Merceğinden Filistin'in Görsel Tanıklığı</h4>
+                            <button class="btn btn-link read-author-btn" data-writer="melek-ulagay">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="writer-card glass-card">
+                        <div class="writer-header">
+                            <div class="writer-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">Şenol Karakaş</h3>
+                                <span class="writer-role">Aktivist & Yazar</span>
+                            </div>
+                        </div>
+                        <div class="writer-quote">"Meydanlardaki kitlesel sesimiz, uluslararası yaptırım taleplerimizin motorudur."</div>
+                        <div class="latest-article-box">
+                            <span class="article-label">Son Yazısı:</span>
+                            <h4 class="article-title">Sokak Hareketleri ve BDS Boykotunun Birleşik Gücü</h4>
+                            <button class="btn btn-link read-author-btn" data-writer="senol-karakas">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="writer-card glass-card">
+                        <div class="writer-header">
+                            <div class="writer-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">Fatma Örgel</h3>
+                                <span class="writer-role">Araştırmacı & Yazar</span>
+                            </div>
+                        </div>
+                        <div class="writer-quote">"Kadınların dayanışma örgütlülüğü direnişin en güçlü damarıdır."</div>
+                        <div class="latest-article-box">
+                            <span class="article-label">Son Yazısı:</span>
+                            <h4 class="article-title">Filistinli Kadınların Tarihsel ve Toplumsal Mücadelesi</h4>
+                            <button class="btn btn-link read-author-btn" data-writer="fatma-orgel">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="writer-card glass-card">
+                        <div class="writer-header">
+                            <div class="writer-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">Kamile Batur</h3>
+                                <span class="writer-role">Eğitimci & Yazar</span>
+                            </div>
+                        </div>
+                        <div class="writer-quote">"Gelecek nesillere aktarılan her doğru bilgi bir özgürlük tohumudur."</div>
+                        <div class="latest-article-box">
+                            <span class="article-label">Son Yazısı:</span>
+                            <h4 class="article-title">Gençlik ve Akademik Alanda Hakikat Mücadelesi</h4>
+                            <button class="btn btn-link read-author-btn" data-writer="kamile-batur">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="writer-card glass-card">
+                        <div class="writer-header">
+                            <div class="writer-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">Nimet Yallıaltın</h3>
+                                <span class="writer-role">Sosyolog & Yazar</span>
+                            </div>
+                        </div>
+                        <div class="writer-quote">"Küresel kamuoyu bilinci, sınırları aşan kardeşliğimizle büyüyor."</div>
+                        <div class="latest-article-box">
+                            <span class="article-label">Son Yazısı:</span>
+                            <h4 class="article-title">Sivil Toplumun Evrensel İnsan Hakları Sınavı</h4>
+                            <button class="btn btn-link read-author-btn" data-writer="nimet-yallialtin">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="writer-card glass-card">
+                        <div class="writer-header">
+                            <div class="writer-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">Şebnem Sözer</h3>
+                                <span class="writer-role">Hukukçu & Yazar</span>
+                            </div>
+                        </div>
+                        <div class="writer-quote">"Hukuk işgalin suçlarını belgeleyen en keskin evrensel araçtır."</div>
+                        <div class="latest-article-box">
+                            <span class="article-label">Son Yazısı:</span>
+                            <h4 class="article-title">Uluslararası Sözleşmeler ve Yaptırım Hukuku</h4>
+                            <button class="btn btn-link read-author-btn" data-writer="sebnem-sozer">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="writer-card glass-card">
+                        <div class="writer-header">
+                            <div class="writer-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">Mehmet Ali Devecioğlu</h3>
+                                <span class="writer-role">Politik Analist & Yazar</span>
+                            </div>
+                        </div>
+                        <div class="writer-quote">"Orta Doğu'da kalıcı barış ancak tam adalet sağlandığında kurulabilir."</div>
+                        <div class="latest-article-box">
+                            <span class="article-label">Son Yazısı:</span>
+                            <h4 class="article-title">Bölgesel Dengeler ve Filistin'in Geleceği</h4>
+                            <button class="btn btn-link read-author-btn" data-writer="mehmet-ali-devecioglu">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="writer-card glass-card">
+                        <div class="writer-header">
+                            <div class="writer-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">Hakan Tahmaz</h3>
+                                <span class="writer-role">Barış Aktivisti & Yazar</span>
+                            </div>
+                        </div>
+                        <div class="writer-quote">"Barış, işgalin bittiği ve hakkın sahibine teslim edildiği yerde başlar."</div>
+                        <div class="latest-article-box">
+                            <span class="article-label">Son Yazısı:</span>
+                            <h4 class="article-title">Adil Bir Barış İçin Dayanışma İradesi</h4>
+                            <button class="btn btn-link read-author-btn" data-writer="hakan-tahmaz">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4B: BDS & Boykot Rehberi -->
+        <section class="section boykot-section dark-surface" id="boykot-rehberi">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag red-tag"><i class="fa-solid fa-store-slash"></i> BİLİNÇLİ TÜKETİCİ REHBERİ</span>
+                    <h2 class="section-title">BDS ve Etik Tüketim Rehberi</h2>
+                    <p class="section-subtitle">Küresel boykot hareketine (BDS) uygun olarak doğrulanan marka listeleri ve yerel etik alternatifler.</p>
+                </div>
+
+                <div class="boycott-search-container">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="boycott-search-input" placeholder="Marka veya ürün kategorisi sorgula (Örn: Gıda, Kahve, Teknoloji, Kozmetik)...">
+                    </div>
+
+                    <div class="boycott-grid" id="boycott-grid">
+                        <div class="boycott-card" data-category="gida kahve">
+                            <div class="boycott-status-badge alert-red"><i class="fa-solid fa-triangle-exclamation"></i> Boykot Hedefi</div>
+                            <h3 class="brand-name">Küresel Kahve Zinciri A</h3>
+                            <p class="boycott-reason">İşgal bölgelerindeki illegal yerleşimlerde faaliyet gösteren şirketlere yatırım aktarma gerekçesiyle BDS hedefindedir.</p>
+                            <div class="alternative-box">
+                                <strong><i class="fa-solid fa-leaf green-text"></i> Önerilen Etik Alternatif:</strong> Yerel bağımsız kahve üreticileri ve adil ticaret (Fair Trade) markaları.
+                            </div>
+                        </div>
+
+                        <div class="boycott-card" data-category="teknoloji">
+                            <div class="boycott-status-badge alert-red"><i class="fa-solid fa-triangle-exclamation"></i> Boykot Hedefi</div>
+                            <h3 class="brand-name">Teknoloji & Bulut Firması B</h3>
+                            <p class="boycott-reason">Askeri gözetim teknolojilerine altyapı sağlayan Cloud sözleşmeleri nedeniyle uluslararası kampanyalara konu olmuştur.</p>
+                            <div class="alternative-box">
+                                <strong><i class="fa-solid fa-leaf green-text"></i> Önerilen Etik Alternatif:</strong> Açık kaynaklı ve bağımsız bulut veri çözümleri.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Eylem ve Etkinlik Çağrısı -->
+        <section class="section eylemler-section" id="eylemler">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag red-tag"><i class="fa-solid fa-calendar-days"></i> SOKAĞIN VE SAHANIN SESİ</span>
+                    <h2 class="section-title">Eylem, Etkinlik ve Stant Çağrıları</h2>
+                    <p class="section-subtitle">Kitlesel mitingler, basın açıklamaları, bilgilendirme stantları ve bildiri dağıtım nöbetleri.</p>
+                </div>
+
+                <div class="featured-event-card glass-panel">
+                    <div class="event-badge-highlight"><i class="fa-solid fa-star"></i> ÖNE ÇIKAN KİTLESEL EYLEM</div>
+                    <div class="grid grid-2 align-center">
+                        <div class="event-details">
+                            <h3 class="event-title">Uluslararası Filistin Dayanışma Yürüyüşü ve Kitlesel Miting</h3>
+                            <div class="event-meta-list">
+                                <div class="meta-item"><i class="fa-regular fa-calendar-check red-text"></i> <strong>Tarih:</strong> 1 Ağustos 2026, Cumartesi</div>
+                                <div class="meta-item"><i class="fa-regular fa-clock green-text"></i> <strong>Saat:</strong> 14:00</div>
+                                <div class="meta-item"><i class="fa-solid fa-location-dot gold-text"></i> <strong>Konum:</strong> Beyazıt Meydanı ➔ Sultanahmet Yürüyüş Güzergahı</div>
+                            </div>
+                            <p class="event-description">
+                                Hakikatin gür sesi olmak, insani kriz karşısında sessiz kalmamak ve uluslararası yaptırım taleplerimizi haykırmak üzere meydanlarda bir araya geliyoruz.
+                            </p>
+                            <div class="event-actions">
+                                <button class="btn btn-primary btn-lg rsvp-btn" data-event-title="Uluslararası Filistin Dayanışma Yürüyüşü">
+                                    <i class="fa-solid fa-circle-check"></i> Katılacağımı Bildir
+                                </button>
+                                <button class="btn btn-secondary btn-lg" onclick="alert('Takvim Hatırlatıcısı (.ics) oluşturuldu!');">
+                                    <i class="fa-regular fa-calendar-plus"></i> Takvime Ekle
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="countdown-container">
+                            <h4 class="countdown-title">Mitinge Kalan Canlı Süre</h4>
+                            <div class="countdown-grid" id="countdown-timer">
+                                <div class="time-box">
+                                    <span class="time-val" id="cd-days">06</span>
+                                    <span class="time-lbl">Gün</span>
+                                </div>
+                                <div class="time-box">
+                                    <span class="time-val" id="cd-hours">14</span>
+                                    <span class="time-lbl">Saat</span>
+                                </div>
+                                <div class="time-box">
+                                    <span class="time-val" id="cd-mins">32</span>
+                                    <span class="time-lbl">Dakika</span>
+                                </div>
+                                <div class="time-box">
+                                    <span class="time-val" id="cd-secs">45</span>
+                                    <span class="time-lbl">Saniye</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-2" style="margin-top: 3rem;">
+                    <div class="action-block-card glass-panel">
+                        <div class="block-header red-border">
+                            <i class="fa-solid fa-bullhorn red-text"></i>
+                            <h3>Eylem ve Yürüyüş Duyuruları</h3>
+                        </div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <span class="action-date red">01 AĞUSTOS • 14:00</span>
+                                <h4>Beyazıt - Sultanahmet Kitlesel Yürüyüşü</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> İstanbul Beyazıt Meydanı</p>
+                                <button class="btn btn-sm btn-outline-primary rsvp-btn" data-event-title="Beyazıt Yürüyüşü">Detay & Katıl</button>
+                            </div>
+                            <div class="action-item">
+                                <span class="action-date red">08 AĞUSTOS • 17:30</span>
+                                <h4>Konsolosluk Önü Basın Açıklaması ve Oturma Eylemi</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> Beşiktaş Meydanı</p>
+                                <button class="btn btn-sm btn-outline-primary rsvp-btn" data-event-title="Beşiktaş Eylemi">Detay & Katıl</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-block-card glass-panel">
+                        <div class="block-header green-border">
+                            <i class="fa-solid fa-store green-text"></i>
+                            <h3>Stant ve Bildiri Dağıtım Çağrıları</h3>
+                        </div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <span class="action-date green">HER ÇARŞAMBA & CUMA • 12:00 - 18:00</span>
+                                <h4>Meydan Bilgilendirme ve Dayanışma Stant Nöbeti</h4>
+                                <p><i class="fa-solid fa-hand-holding-heart"></i> Kadıköy Rıhtım & Üsküdar Meydanı</p>
+                                <button class="btn btn-sm btn-secondary rsvp-btn" data-event-title="Stant Gönüllüsü Nöbeti">Stant Gönüllüsü Ol</button>
+                            </div>
+                            <div class="action-item">
+                                <span class="action-date green">15 AĞUSTOS • 14:00 - 19:00</span>
+                                <h4>BDS Boykot Broşür Dağıtımı & Bilinçlendirme Stantı</h4>
+                                <p><i class="fa-solid fa-store-slash"></i> Taksim Tünel Meydanı</p>
+                                <button class="btn btn-sm btn-secondary rsvp-btn" data-event-title="BDS Stant Dağıtımı">Stanta Katıl</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Filistin'e Özgürlük Tartışmaları (YouTube Programları) -->
+        <section class="section tartismalar-section dark-surface" id="tartismalar">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag red-tag"><i class="fa-brands fa-youtube"></i> DİJİTAL YAYIN MERKEZİ</span>
+                    <h2 class="section-title">Filistin'e Özgürlük YouTube Yayınları</h2>
+                    <p class="section-subtitle">Filistin'e Özgürlük Platformu resmi YouTube kanalında yer alan tüm canlı yayınlar, söyleşiler, paneller ve eylem arşiv videoları.</p>
+                </div>
+
+                <div class="youtube-player-card glass-panel">
+                    <div class="grid grid-2 align-center">
+                        <div class="video-preview-wrapper">
+                            <div class="video-thumbnail-box">
+                                <img src="assets/fop_sarachane_eylemi.jpg" alt="Filistin'e Özgürlük YouTube Canlı Yayın">
+                                <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" class="yt-play-button" aria-label="YouTube'da İzle">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <span class="live-badge-yt"><i class="fa-solid fa-signal"></i> CANLI YAYIN KAYDI</span>
+                            </div>
+                        </div>
+
+                        <div class="video-info-box">
+                            <span class="series-tag">Gündem Filistin • Resmi YouTube Kanalı</span>
+                            <h3 class="video-title">"Soykırımı Durduralım! İsrail'i Tanıma, Tam Ambargo Uygula!"</h3>
+                            <p class="video-desc">
+                                Filistin'e Özgürlük Platformu YouTube kanalımızda yayınlanan basın açıklamaları, paneller, akademisyen ve aktivist söyleşileri, eylem arşiv videoları ve canlı yayın kayıtları.
+                            </p>
+                            <div class="yt-cta-buttons">
+                                <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" class="btn btn-primary btn-lg">
+                                    <i class="fa-brands fa-youtube"></i> @FilistineOzgurlukPlatformu Kanalına Katıl
+                                </a>
+                                <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" class="btn btn-secondary btn-lg">
+                                    <i class="fa-solid fa-play"></i> Tüm Videoları İzle
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="youtube-grid">
+                    <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" class="yt-video-card glass-card" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="yt-card-media" style="position: relative;">
+                            <img src="assets/fop_31_aralik_2023.png" alt="Vicdan Mahkemesi ve BDS Paneli">
+                            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; opacity: 0.9;">
+                                <i class="fa-brands fa-youtube red-text" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <span class="yt-duration">45:20</span>
+                        </div>
+                        <div class="yt-card-body">
+                            <span class="yt-program-cat">Vicdan Mahkemesi</span>
+                            <h4 class="yt-card-title">Fatma Akdokur, Ümit Aktaş & Şenol Karakaş ile Toplumsal Hafıza</h4>
+                            <p class="yt-card-meta"><i class="fa-brands fa-youtube red-text"></i> YouTube'da İzle • Filistin'e Özgürlük</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" class="yt-video-card glass-card" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="yt-card-media" style="position: relative;">
+                            <img src="assets/israil_soykirimci_korsan_eylem.jpg" alt="Savaşa Hayır İnisiyatifi Paneli">
+                            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; opacity: 0.9;">
+                                <i class="fa-brands fa-youtube red-text" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <span class="yt-duration">58:15</span>
+                        </div>
+                        <div class="yt-card-body">
+                            <span class="yt-program-cat">Savaşa Hayır İnisiyatifi</span>
+                            <h4 class="yt-card-title">Savaş Politikalarına Karşı Birleşik Barış Barikatı Paneli</h4>
+                            <p class="yt-card-meta"><i class="fa-brands fa-youtube red-text"></i> YouTube'da İzle • Filistin'e Özgürlük</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" class="yt-video-card glass-card" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="yt-card-media" style="position: relative;">
+                            <img src="assets/kuresel_intifada_crowd.jpg" alt="Küresel İntifada Yayınları">
+                            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; opacity: 0.9;">
+                                <i class="fa-brands fa-youtube red-text" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <span class="yt-duration">38:40</span>
+                        </div>
+                        <div class="yt-card-body">
+                            <span class="yt-program-cat">Küresel İntifada</span>
+                            <h4 class="yt-card-title">Küresel Dayanışma Eylemleri ve Basın Açıklamaları Kayıtları</h4>
+                            <p class="yt-card-meta"><i class="fa-brands fa-youtube red-text"></i> YouTube'da İzle • Filistin'e Özgürlük</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top grid grid-4">
+                <div class="footer-col brand-col">
+                    <a href="#" class="brand-logo footer-logo">
+                        <svg viewBox="0 0 420 180" class="official-logo-svg">
+                            <rect x="24" y="8" width="14" height="82" class="top-stripe" />
+                            <rect x="24" y="90" width="14" height="82" fill="#007A3D" />
+                            <polygon points="0,50 0,130 58,90" fill="#E4312B" />
+                            <text x="76" y="74" font-size="64" font-weight="800" class="logo-text">Filistin’e</text>
+                            <text x="76" y="152" font-size="64" font-weight="800" class="logo-text">Özgürlük</text>
+                        </svg>
+                    </a>
+                    <p class="footer-desc">
+                        Adalet, insan hakları ve evrensel özgürlük değerleri doğrultusunda Filistin halkının yanında duran bağımsız iletişim ağınız.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" title="X / Twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" title="Telegram" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Hızlı Bağlantılar</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#gunce">Filistin Güncesi</a></li>
+                        <li><a href="#kuresel-intifada">Küresel İntifada</a></li>
+                        <li><a href="#savasa-hayir">Savaşa Hayır İnisiyatifi</a></li>
+                        <li><a href="#arsiv">Dijital Filistin Arşivi</a></li>
+                        <li><a href="#biz-kimiz">Biz Kimiz?</a></li>
+                        <li><a href="#yazarlar">Köşe Yazarları</a></li>
+                        <li><a href="#eylemler">Eylem & Stantlar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Dokümanlar & Dosyalar</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#savasa-hayir">Savaşa Hayır Deklarasyonu</a></li>
+                        <li><a href="#arsiv">BM Durum Raporları</a></li>
+                        <li><a href="#savas-suclari">Cenevre & UCM Kanıtları</a></li>
+                        <li><a href="#boykot-rehberi">BDS Rehberi ve Materyaller</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-heading">Bültene Abone Olun</h4>
+                    <p class="footer-desc">Haftalık doğrulanan haberler, eylem duyuruları ve raporlar e-posta kutunuza gelsin.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="E-posta adresiniz..." required id="newsletter-email">
+                            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Filistin'e Özgürlük Platformu. Tüm hakları dayanışmaya ve adalet arayan tüm insanlığa açıktır.</p>
+                <div class="flag-bar">
+                    <span class="flag-stripe black"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Sayfa Başına Dön">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- MODAL 1: Read Article Modal -->
+    <dialog class="custom-modal" id="article-modal">
+        <div class="modal-content glass-panel">
+            <button class="modal-close" id="close-article-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" id="article-modal-body"></div>
+        </div>
+    </dialog>
+
+    <!-- MODAL 2: Event RSVP & İklim Fest Modal -->
+    <dialog class="custom-modal" id="rsvp-modal">
+        <div class="modal-content glass-panel" style="padding: 2rem 2.5rem; max-width: 650px; border: 1px solid var(--border-color); max-height: 90vh; overflow-y: auto;">
+            <button class="modal-close" id="close-rsvp-modal"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div style="margin-bottom: 1.5rem; text-align: center;">
+                <!-- Event Poster Image -->
+                <div style="overflow: hidden; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem; background: #0F172A; max-height: 380px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/iklimfest_2026_poster.jpg" alt="İklim Fest '26 Burgazada Cennet Bahçesi Afişi" style="width: 100%; height: auto; object-fit: contain;">
+                </div>
+
+                <span class="section-tag green-tag" style="margin-bottom: 0.8rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+                    <i class="fa-solid fa-tree"></i> İKLİM FEST '26 duyurusu
+                </span>
+                
+                <!-- Verbatim Announcement Title -->
+                <h3 class="modal-title" style="font-family: var(--font-serif); font-size: 1.45rem; line-height: 1.4; margin-top: 0.5rem; color: var(--text-primary);">
+                    İklimi Değil Sistemi Değiştir Platformu İklim Fest’26’yı gururla sunar!
+                </h3>
+            </div>
+
+            <!-- Verbatim Body Paragraph -->
+            <p style="font-size: 1.02rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem; text-align: justify;">
+                26 Eylül’de Burgazada’da, İklim krizine karşı festival için buluşuyoruz! Kasım ayındaki COP31’e alternatif olarak düzenlenecek Halkların İklim Zirvesi (HİZ) için geri sayım başladı. Yazın sonunu Cennet Bahçesi’nde getiriyor, kasım yoğunluğuna hep birlikte umutla ve müzikle giriyoruz. Filistin'e Özgürlük Platformu olarak "işgal altında iklim adaleti olmaz" diyerek bu etkinliğin aktif bir parçası olacağız, stant açıp imza kampanyamızı sürdüreceğiz.
+            </p>
+
+            <!-- Verbatim Date & Location Highlight Badge -->
+            <div style="background: rgba(0, 122, 61, 0.15); border: 1px solid var(--palestine-green); padding: 1rem 1.2rem; border-radius: var(--radius-md); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.8rem; font-weight: 700; color: #10B981; font-size: 1.05rem;">
+                <i class="fa-solid fa-location-dot" style="font-size: 1.3rem;"></i>
+                <span>26 Eylül 16:00, Burgazada Cennet Bahçesi</span>
+            </div>
+
+            <!-- Stand & Festival RSVP Form -->
+            <div style="border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);"><i class="fa-solid fa-user-plus green-text"></i> Stant Gönüllülüğü ve Festival Katılım Kaydı</h4>
+                <form id="rsvp-form" class="modal-form">
+                    <div class="form-group">
+                        <label for="rsvp-name">Adınız Soyadınız:</label>
+                        <input type="text" id="rsvp-name" required placeholder="Örn: Ayşe Yılmaz">
+                    </div>
+                    <div class="form-group">
+                        <label for="rsvp-email">E-posta Adresiniz:</label>
+                        <input type="email" id="rsvp-email" required placeholder="ornek@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="rsvp-phone">Telefon (Gönüllülük ve İletişim İçin):</label>
+                        <input type="tel" id="rsvp-phone" placeholder="05XX XXX XX XX">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg"><i class="fa-solid fa-check"></i> Katılım & Stant Gönüllülüğümü Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- MODAL 3: UN Special Rapporteur Report Modal (A/HRC/61/71) -->
+    <dialog class="custom-modal" id="un-report-modal">
+        <div class="modal-content glass-panel" style="padding: 2.2rem 2.5rem; max-width: 740px; border: 1px solid var(--border-color);">
+            <button class="modal-close" id="close-un-report-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header text-center" style="margin-bottom: 1.5rem;">
+                <span class="section-tag red-tag" style="margin-bottom: 0.6rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+                    <i class="fa-solid fa-file-pdf"></i> BM ÖZEL RAPORTÖRÜ RAPORU
+                </span>
+                <h3 class="modal-title" style="font-size: 1.25rem; line-height: 1.45; margin-top: 0.4rem; color: #FFFFFF;">
+                    A/HRC/61/71: İşkence ve soykırım – 1967’den beri işgal altındaki Filistin topraklarındaki insan hakları durumuna ilişkin Özel Raportörün raporu
+                </h3>
+                <p class="modal-subtitle" style="margin-top: 0.5rem; color: #F59E0B; font-weight: 700; font-size: 0.95rem;">
+                    <i class="fa-regular fa-calendar"></i> 19 Şubat 2026
+                </p>
+            </div>
+            
+            <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid var(--border-color); padding: 1.6rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; max-height: 380px; overflow-y: auto;">
+                <h4 style="font-weight: 700; color: #F59E0B; margin-bottom: 0.8rem; font-size: 1.1rem; border-bottom: 1px solid rgba(245, 158, 11, 0.3); padding-bottom: 0.4rem;">Özet</h4>
+                <p style="font-size: 1.02rem; line-height: 1.85; color: var(--text-secondary); text-align: justify; margin: 0;">
+                    Bu rapor, 7 Ekim 2023 tarihinden bu yana işgal altındaki Filistin topraklarından gelen Filistinlilere karşı İsrail’in sistematik işkence uygulamalarını incelemektedir; bu uygulamalar, hem gözaltı sırasında hem de gözaltı dışında gerçekleştirilen ve Soykırım Sözleşmesi kapsamında soykırım eşiğini karşılayan uygulamaları kapsamaktadır. Raporda, işkencenin, hem gözaltı sırasında uygulanan kötü muamele hem de uzun vadeli toplu acı ve ıstırap yaratmak amacıyla yürütülen, zorla yerinden edilme, toplu katliamlar, yoksun bırakma ve tüm yaşam kaynaklarının yok edilmesinden oluşan amansız bir kampanya yoluyla, erkekler, kadınlar ve çocuklara uygulanan egemenlik ve cezalandırmanın ayrılmaz bir parçası haline geldiği belgelenmektedir. Bedenleri kırmak, bir halkı haysiyetinden mahrum bırakmak ve topraklarından zorla çıkarmak amacıyla tasarlanmış, sürekli ve toprak genelinde yaygın bir psikolojik terör rejimi dayatılmaktadır. Bu, tesadüfi bir şiddet değildir. Bu, insanlıktan çıkarma temeli üzerine inşa edilmiş ve zulüm ile toplu işkence politikasıyla sürdürülen yerleşimci sömürgeciliğinin mimarisidir.
+                </p>
+            </div>
+
+            <div style="text-align: center; border-top: 1px solid var(--border-color); padding-top: 1.2rem;">
+                <a href="https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session61/advance-version/a-hrc-61-71-aev.pdf" target="_blank" class="btn btn-primary btn-lg btn-block" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; text-decoration: none; word-break: break-all;">
+                    <i class="fa-solid fa-file-pdf"></i> BM Orijinal Raporunun Tam PDF Metnine Eriş (.PDF) <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- MODAL 4: Vicdan Mahkemesi Files Link List Modal -->
+    <dialog class="custom-modal" id="vicdan-files-modal">
+        <div class="modal-content glass-panel" style="padding: 2rem 2.5rem; max-width: 720px; border: 1px solid var(--border-color);">
+            <button class="modal-close" id="close-vicdan-files-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header text-center" style="margin-bottom: 1.5rem;">
+                <span class="section-tag gold-tag" style="margin-bottom: 0.5rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+                    <i class="fa-solid fa-gavel"></i> VİCDAN MAHKEMESİ DOSYA BAĞLANTILARI
+                </span>
+                <h3 class="modal-title" style="font-size: 1.4rem; margin-top: 0.4rem;">
+                    Vicdan Mahkemesi Tüm Belge ve Masa Raporları
+                </h3>
+                <p class="modal-subtitle" style="margin-top: 0.4rem; color: var(--text-secondary);">
+                    İndirmek veya incelemek istediğiniz belgenin bağlantısına tıklayınız:
+                </p>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem; max-height: 480px; overflow-y: auto; padding-right: 0.5rem;">
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-book-bookmark" style="font-size: 1.8rem; color: #F59E0B;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Vicdan Mahkemesi Raporu (24 Sayfalık Kitapçık)</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">15 Masa Suç Dosyaları, İddianame ve Karar Metni (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_mahkemesi_raporu_2024.pdf" download="Vicdan_Mahkemesi_Raporu_24_03_2024.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-file-pdf" style="font-size: 1.8rem; color: var(--palestine-red);"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Vicdan Mahkemesi 15 Masa Sunum Özeti</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">15 Çalışma Masası Suç Raporları ve Basın Açıklaması (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_mahkemesi_15_masa_ozeti.pdf" download="Vicdan_Mahkemesi_15_Masa_Ozeti.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-scale-unbalanced-flip" style="font-size: 1.8rem; color: #F59E0B;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Vicdan Mahkemesi İddianamesi Tam Metni</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Filistin'e Özgürlük Platformu Resmi İddianamesi (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_mahkemesi_iddianamesi_tam_metni.pdf" download="Vicdan_Mahkemesi_Iddianamesi.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-notes-medical" style="font-size: 1.8rem; color: #10B981;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Sağlık Masası Raporu</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">İşgalin Gazze'de İnsan Yaşamı ve Sağlık Sistemine Yıkıcı Etkisi (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_saglik_masasi.pdf" download="Vicdan_Mahkemesi_Saglik_Masasi_Raporu.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-brain" style="font-size: 1.8rem; color: #EC4899;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Psikolojik Sağlık Masası Raporu</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">İsrail'in Gazze Saldırılarının Psikolojik Sağlık Üzerine Etkileri (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_psikolojik_saglik_masasi.pdf" download="Vicdan_Mahkemesi_Psikolojik_Saglik_Masasi_Raporu.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-building-circle-xmark" style="font-size: 1.8rem; color: #8B5CF6;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Mekân Çalışmaları Grubu Raporu</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">İsrail'in Gazze Saldırılarının Mekânsal Boyutu (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_mekan_calismalari_masasi.pdf" download="Vicdan_Mahkemesi_Mekan_Calismalari_Raporu.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-paw" style="font-size: 1.8rem; color: #EC4899;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Hayvan Hakları Aktivistleri Masası Raporu</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">İsrail Soykırım Raporu & Biyoçeşitlilik Tahribatı (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_hayvan_haklari_masasi.pdf" download="Vicdan_Mahkemesi_Hayvan_Haklari_Raporu.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-palette" style="font-size: 1.8rem; color: #10B981;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Sanatçılar Masası Soykırım Raporu</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Filistin Kültür ve Sanat Dünyasına Yönelik Soykırım ve Tahribat (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_sanatcilar_masasi.pdf" download="Vicdan_Mahkemesi_Sanatcilar_Masasi_Raporu.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-video" style="font-size: 1.8rem; color: #F59E0B;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Sinema ve Belgeselciler Masası Sunumu</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Filistin Sinemasında Direniş'in İzleri & Kültürel Soykırım Analizi (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_sinema_ve_belgeselciler_masasi.pdf" download="Vicdan_Mahkemesi_Sinema_ve_Belgeselciler_Masasi_Sunumu.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-child-reaching" style="font-size: 1.8rem; color: #3B82F6;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Çocuk Masası Sunumu</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">İsrail'in Gazze'deki Savaşının Çocuklar Üzerindeki Etkisi (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_cocuk_masasi.pdf" download="Vicdan_Mahkemesi_Cocuk_Masasi_Sunumu.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-venus" style="font-size: 1.8rem; color: #EC4899;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Kadın ve LGBTİ+ Masası Sunumu</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Kadın ve LGBTİ+ Özgürleşmesinin Araçsallaştırılması ve Hak İhlalleri (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_kadin_lgbti_masasi.pdf" download="Vicdan_Mahkemesi_Kadin_ve_LGBTI_Masasi_Sunumu.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-music" style="font-size: 1.8rem; color: #8B5CF6;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Müzik Emekçileri Masası Sunumu</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Filistin Müzik Kültürüne ve Müzisyenlere Yönelik Saldırı ve Tahribat (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_muzik_emekcileri_masasi.pdf" download="Vicdan_Mahkemesi_Muzik_Emekcileri_Masasi_Sunumu.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-seedling" style="font-size: 1.8rem; color: #10B981;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Su, Toprak, Yaşam ve İklim Adaleti Masası Sunumu</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Eko-kırımdan Soy-kırıma: İsrail Devleti'nin Suç Dosyası (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_iklim_adaleti_masasi.pdf" download="Vicdan_Mahkemesi_Iklim_Adaleti_Masasi_Sunumu.pdf" class="btn btn-sm btn-primary"><i class="fa-solid fa-download"></i> İndir (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-solid fa-file-pdf" style="font-size: 1.8rem; color: #3B82F6;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">🇬🇧 People's Tribunal Panel Judgement</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Official English Verdict & Panel Declaration (.PDF)</p>
+                        </div>
+                    </div>
+                    <a href="assets/vicdan_mahkemesi_karari_EN.pdf" download="Peoples_Tribunal_Panel_Judgement_EN.pdf" class="btn btn-sm btn-secondary"><i class="fa-solid fa-download"></i> Download (.PDF)</a>
+                </div>
+
+                <div class="glass-card" style="padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 220px;">
+                        <i class="fa-brands fa-youtube" style="font-size: 1.8rem; color: #EF4444;"></i>
+                        <div>
+                            <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Duruşma Canlı Yayın Video Arşivi</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">YouTube Canlı Yayın ve Tanıklık Video Kayıtları</p>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/live/3cCG3NfQhHM?si=ve5C8WaJSZv09Xic" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fa-brands fa-youtube"></i> YouTube'da İzle</a>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Notification Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
