@@ -106,59 +106,59 @@
     <div class="drawer-backdrop" id="drawer-backdrop"></div>
 
     <main>
-        <!-- Hero Section (Manşet) -->
+       <!-- Hero Section (Manşet) -->
         <section class="hero-section" id="hero">
-            
-            <!-- GÖRSELİ TAM BURAYA, EN ÜSTE YERLEŞTİRİYORUZ -->
-            <div style="text-align: center; width: 100%; padding: 20px 0 10px 0;">
-                <img src="drfilistin-ozgurluk.png" alt="Dr. Hussam Ebu Safiye ve Filistinli Tutsaklara Özgürlük" style="max-width: 90%; height: auto; border-radius: 12px; display: inline-block;">
-            </div>
-
             <div class="hero-bg-overlay"></div>
             <div class="hero-pattern"></div>
-            <div class="container hero-container">
-                <!-- Eyebrow text -->
-                <div class="hero-badge animate-fade">
-                    <span class="badge-flag-stripe red"></span>
-                    <span class="badge-flag-stripe green"></span>
-                    <span class="badge-flag-stripe white"></span>
-                    <span>Filistin Direnişinin Kazanması için Bir Aradayız</span>
+            
+            <div class="container hero-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 2rem;">
+                
+                <!-- 1. En Üstteki Bant (Pill Badge) -->
+                <div class="hero-badge animate-fade" style="background: rgba(255,255,255,0.9); border: 1px solid #e5e7eb; padding: 10px 22px; border-radius: 99px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 2rem;">
+                    <div style="display: flex; gap: 4px;">
+                        <span style="width: 8px; height: 8px; background: red; border-radius: 50%;"></span>
+                        <span style="width: 8px; height: 8px; background: black; border-radius: 50%;"></span>
+                        <span style="width: 8px; height: 8px; background: #fff; border: 1px solid #ddd; border-radius: 50%;"></span>
+                        <span style="width: 8px; height: 8px; background: green; border-radius: 50%;"></span>
+                    </div>
+                    <span style="font-size: 15px; font-weight: 600; color: #1f2937;">Filistin Direnişinin Kazanması için Bir Aradayız</span>
                 </div>
                 
-                <!-- Main Big Title -->
-                <h1 class="hero-title animate-up main-hero-title">
+                <!-- 2. Ana Başlık -->
+                <h1 class="hero-title animate-up main-hero-title" style="font-size: 4rem; font-weight: 800; color: #111; margin-bottom: 1.5rem; line-height: 1.1;">
                     Filistin'e Özgürlük
                 </h1>
                 
-                <!-- Requested Exact Text Under Hero Title -->
-                <p class="hero-description animate-up delay-1">
+                <!-- 3. Açıklama Metni -->
+                <p class="hero-description animate-up delay-1" style="max-width: 800px; font-size: 1.15rem; color: #4b5563; line-height: 1.7; margin-bottom: 2.5rem;">
                     Filistin'e Özgürlük Platformu; İsrail'in Filistin'de işlediği soykırım suçlarının duyurulması ve durdurulması, küresel intifadanın büyütülmesi için kitlesel eylem ve stant çalışmaları ile Filistin halkının meşru direnişinin yanında duran bağımsız bir dayanışma ağıdır.
                 </p>
 
-                <div class="hero-buttons animate-up delay-2">
-                    <button class="btn btn-primary btn-lg rsvp-btn" onclick="document.getElementById('rsvp-modal')?.showModal();">
+                <!-- 4. Butonlar -->
+                <div class="hero-buttons animate-up delay-2" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
+                    <button class="btn btn-primary btn-lg rsvp-btn" onclick="document.getElementById('rsvp-modal')?.showModal();" style="background: #c8372d; border-color: #c8372d;">
                         <i class="fa-solid fa-bullhorn"></i> Etkinlik ve Stantlara Katıl
                     </button>
-                    <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" class="btn btn-secondary btn-lg">
-                        <i class="fa-brands fa-youtube red-text"></i> YouTube Yayınlarını İzle
+                    <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" class="btn btn-secondary btn-lg" style="background: #dae5d8; color: #2d5a37; border: 1px solid #bccdc0;">
+                        <i class="fa-brands fa-youtube" style="color: #c8372d;"></i> YouTube Yayınlarını İzle
                     </a>
                 </div>
 
-                <!-- Featured Hero Photo -->
-                <div class="hero-rally-wrapper animate-up delay-2" style="margin: 2.5rem 0 3rem;">
-                    <div class="hero-rally-card glass-panel" style="padding: 0.5rem; background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-color);">
-                        <img src="assets/fop_sarachane_eylemi.jpg" alt="Dr. Hussam Ebu Safiye'ye ve Tüm Filistinli Tutsaklara Özgürlük!" class="hero-rally-img" style="border-radius: var(--radius-md); max-height: 560px; width: 100%; object-fit: cover;">
+                <!-- 5. Hero Fotoğrafı ve İmza Kampanyası Kartı -->
+                <div class="hero-rally-wrapper animate-up delay-2" style="margin: 1rem 0 3rem; width: 100%; max-width: 900px;">
+                    <div class="hero-rally-card glass-panel" style="padding: 0.75rem; background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-color); border-radius: 16px;">
+                        <img src="drfilistin-ozgurluk.png" alt="Dr. Hussam Ebu Safiye'ye ve Tüm Filistinli Tutsaklara Özgürlük!" class="hero-rally-img" style="border-radius: 12px; max-height: 560px; width: 100%; object-fit: cover;">
                         <div class="hero-rally-caption text-center" style="padding: 0.85rem 1rem 0.5rem; font-size: 1.1rem; font-weight: 700;">
-                            <a href="https://secure.avaaz.org/community_petitions/tr/tbmm_nde_vekiller_ve_halklar_kamuoyu_dr_hussam_ebu_safiyye_ye_ve_tum_filistinli_tutsaklara_ozgurluk/?__HASH__&utm_source=whatsapp&utm_medium=social_share&utm_campaign=1768071&utm_term=__HASH__%2Btr&share_location=do_postaction&utm_source=whatsapp&utm_medium=social_share&utm_campaign=1768071&astro=true&share_location=post_action&referer_id=019f4b0748607319b877b42bde8ea4a6" target="_blank" style="color: #F59E0B; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap;" onmouseover="this.style.color='var(--palestine-red)'" onmouseout="this.style.color='#F59E0B'">
-                                <i class="fa-solid fa-file-signature"></i> İmza Kampanyasına Sen de Katıl-Dr. Abu Safiya'ya Özgürlük <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.85rem;"></i>
+                            <a href="https://secure.avaaz.org/community_petitions/tr/tbmm_nde_vekiller_ve_halklar_kamuoyu_dr_hussam_ebu_safiyye_ye_ve_tum_filistinli_tutsaklara_ozgurluk/?__HASH__&utm_source=whatsapp&utm_medium=social_share&utm_campaign=1768071&utm_term=__HASH__%2Btr&share_location=do_postaction&utm_source=whatsapp&utm_medium=social_share&utm_campaign=1768071&astro=true&share_location=post_action&referer_id=019f4b0748607319b877b42bde8ea4a6" target="_blank" style="color: #F59E0B; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <i class="fa-solid fa-file-signature"></i> İmza Kampanyasına Sen de Katıl - Dr. Abu Safiya'ya Özgürlük <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.85rem;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Three Hero Feature Cards -->
+                <!-- 6. Öne Çıkan Kutular (Günün Sözü & Küresel İntifada) -->
                 <div class="hero-highlights-grid animate-up delay-3">
-                    <!-- 1. Günün Sözü Kutusu -->
+                    <!-- Günün Sözü Kutusu -->
                     <div class="highlight-card quote-highlight-card glass-card">
                         <div class="highlight-badge gold-bg"><i class="fa-solid fa-quote-left"></i> GÜNÜN SÖZÜ</div>
                         <blockquote class="quote-text">
@@ -167,7 +167,7 @@
                         <div class="quote-author">— Ilan Pappé</div>
                     </div>
 
-                    <!-- 2. Küresel İntifada Kutusu -->
+                    <!-- Küresel İntifada Kutusu -->
                     <div class="highlight-card intifada-highlight-card glass-card">
                         <div class="highlight-badge red-bg"><i class="fa-solid fa-globe"></i> KÜRESEL İNTİFADA</div>
                         <h3 class="highlight-title">Küresel Filistin Dayanışma Haberleri</h3>
@@ -178,6 +178,10 @@
                             Dayanışma Haberleri <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
+                </div>
+
+            </div>
+        </section>
 
                     <!-- 3. İsrail'in Savaş Suçları Kutusu -->
                     <div class="highlight-card crimes-highlight-card glass-card">
