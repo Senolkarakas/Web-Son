@@ -273,10 +273,79 @@ document.addEventListener('DOMContentLoaded', () => {
             author: "Birleşmiş Milletler Genel Sekreterliği",
             title: "BM, İsrail’in Batı Şeria’da yasadışı yerleşim yerlerini genişletmesini sert bir dille kınadı",
             content: "<p class='lead-text' style='font-size: 1.15rem; font-weight: 700; color: var(--text-primary); line-height: 1.8; margin-bottom: 1rem;'>Birleşmiş Milletler Genel Sekreteri Antonio Guterres, işgal altındaki Batı Şeria’da yerleşim yerlerinin geliştirilmesini hızlandırmaya yönelik İsrail planlarını kınadı.</p><p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);'>Guterres, Pazartesi günü yayınlanan bir açıklamada, Filistin topraklarındaki İsrail yerleşim yerlerinin “hiçbir hukuki geçerliliği olmadığını” ve uluslararası hukukun “bariz bir ihlali” teşkil ettiğini belirtti. Guterres’in bu eleştirisi, Batı Şeria’da İsrail şiddetinin tırmanışa geçmesi ve İsrail’in mevcut yerleşim noktalarını önce gasp edip ardından bu gapsı yasallaştırma ve yenilerini kurma planları sürerken geldi.</p>"
+        },
+        'westbank-settler-attacks': {
+            author: "İşgal Altındaki Batı Şeria - Saha Raporu",
+            title: "Filistinliler, İsrailli yerleşimcilerin Batı Şeria'da camileri, arabaları ve tarım arazilerini ateşe verdiğini anlatıyor",
+            content: `
+                <div style="margin-bottom: 1.5rem; border-radius: var(--radius-md); overflow: hidden; max-height: 380px;">
+                    <img src="assets/gunce_yerlesimci_saldirilari.jpg" alt="İsrailli Yerleşimci Saldırıları" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <p class='lead-text' style='font-size: 1.1rem; font-weight: 700; color: var(--text-primary); line-height: 1.8; margin-bottom: 1rem;'>
+                    Filistinli yetkililer, İsrailli yerleşimcilerin işgal altındaki Batı Şeria'da iki camiyi, ayrıca arabaları ve tarım arazilerini ateşe verdiğini, bölgedeki gerilimin tırmanmaya devam ettiğini söylüyor.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    Filistin kaynaklarından gelen bilgilere göre, işgal altındaki Batı Şeria'da iki köy, yerleşimciler tarafından gece saatlerinde saldırıya uğradı; arabalar tahrip edildi, mallar çalındı ve duvarlara nefret içerikli yazılar yazıldı.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    Kusra belediye başkanı, yerleşimcilerin yapım aşamasında olan bir camiyi ateşe verdiğini söyledi.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    Abdul Azim Wadi, yerleşimcilerin caminin duvarlarına "intikam" kelimesini de içeren grafitiler yazdığını söyledi.
+                </p>
+            `
+        },
+        'israil-ateskes-analizi': {
+            author: "Politik Analiz",
+            title: "İsrail Ateşkes Günlerinde 1200 Filistinliyi Öldürdü",
+            content: `
+                <div style="margin-bottom: 1.5rem; border-radius: var(--radius-md); overflow: hidden; max-height: 380px;">
+                    <img src="assets/gunce_politik_analiz_ateskes.jpg" alt="İsrail Ateşkes Günlerinde 1200 Filistinliyi Öldürdü" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <p class='lead-text' style='font-size: 1.1rem; font-weight: 700; color: var(--text-primary); line-height: 1.8; margin-bottom: 1.2rem;'>
+                    İran'la olan ateşkesin bozulması ve ABD’nin saldırılara devam etmesi beraberinde bölgesel tansiyonun yükselmesini ve Yemen'e kadar uzanmasını getirdi. İran bölgedeki ABD askeri üslerine karşı eylemler gerçekleştirirken bölge halklarını ABD ordusuna karşı eylemler yapmaya ve onu bölgeden kovmaya çağırdı.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    Ürdün’de yüzlerce politikacı, aydın ve aşiret önderi ABD üslerinin kapatılması ve ABD askerlerinin çıkarılması için bildirge yayınladı. Bu aşamada savaş halinin durması beklenmiyor fakat Katar ve Pakistan'ın girişimleri sürüyor.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    İran’a yapılan saldırıyla bağlantılı olarak Yemen'e yapılan Suudi Arabistan saldırısının ardından Yemen Suudi Arabistan’a deniz ve hava ablukası uygulayacağını duyurdu.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    Lübnan’da yapılan ateşkes sürüyor. ABD bugün işgal ordusunun kimi bölgelerden çekileceğini ve yerine Lübnan ordusunun gireceğini duyurdu. İşgal devleti bu bölgelere deneysel bölgeler adını verdi. Lübnan ordusunun o bölgelerde direnişi elimine etmesi halinde diğer bölgeler aşamalı olarak teslim edilecek. Bu anlaşma Lübnan halkı ve politik güçlerinin çoğunun tepkisi ile karşılandı.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    İşgal Ordusunun Suriye’de ilerlemesi ve operasyonları sürüyor, dün (20 Temmuz) yaptığı saldırılarda iki Suriyeli yaralandı.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    İran, Ürdün’de bulunan ABD üslerine yaptığı füzeli saldırı akabinde Ürdün halkına bu saldırıyı gerçekleştirmek ve sonrasında isabetli olduğunu teyit etmek için sağladığı bilgiler dolayısıyla teşekkür etti.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    Gazze'de işgal ordusunun ateşkes ihlalleri sürüyor ve saldırıları giderek yoğunlaşıyor. Ateşkesten bu yana hayatını kaybeden Filistinlilerin sayısı 1.200'e yaklaştı. Öte yandan tıbbi malzemelerin, kullanım ve içme suyunun, enerji ve gıdanın hâlâ kısıtlı kalması nedeniyle insani durum ağırlığını koruyor.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    Müzakerelerde herhangi bir gelişme sağlanmadığı görülüyor, işgal ordusu birinci aşamayı tamamlamadan direnişin silahını teslim etmesi için yapılan basınç hâlâ devam ediyor.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    Batı Şeria’da bir değişiklik gözlemlenmedi. Filistin Yönetimi Başkanı Abbas Filistin ulusal meclis ve yasama meclisi seçimlerinin Kasım ayında yapılacağını duyurdu. Tek taraflı alınan bu kararlar Filistin fraksiyonları tarafından eleştirildi.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    Hamas başkanlık seçimini tamamladı ve Halil el-Hayye’yi seçti. Direniş kanadının hâlâ ağırlıkta olduğunu gösteren bu seçim sonucu direniş güçleri tarafından kutlandı.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    Hamas Gazze hükümeti, yapılan ateşkes anlaşması gereği gelmesi beklenen Filistin Yönetim Heyeti’ne sorumlulukların devredilmek üzere istifa ettiğini bildirdi. Bu istifanın, Filistin Yönetim Heyeti’nin Gazze’ye girmesini ve işe başlamasını engelleyen işgal devletinin elindeki bir kozu ya da bahaneyi ortadan kaldırırmaya hizmet ettiği yorum yapıldı. Bu yapılırken yine silahsızlandırma konusunun ancak Filistinlilerden oluşan bir yönetim kurulduktan sonra ve ona devredilmek üzere olacağı teyit edilmiş oldu.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    Belçika ve İrlanda yerleşim bölgeleri üretimi olan ürünlerin boykot edilmesi yasalarını onayladı.
+                </p>
+                <p style='font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;'>
+                    AB parlamentosunda İsrail’e ekonomik yaptırımlar uygulanması yönündeki tavsiye kararının geçmesi Almanya tarafından engellendi.
+                </p>
+            `
         }
     };
 
-    document.querySelectorAll('.read-author-btn, .btn-read-more').forEach(btn => {
+    document.querySelectorAll('.read-author-btn, .btn-read-more, .read-article-link').forEach(btn => {
         btn.addEventListener('click', () => {
             const writerId = btn.getAttribute('data-writer');
             const data = authorArticles[writerId] || {
@@ -297,6 +366,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     closeArticleModalBtn?.addEventListener('click', () => articleModal?.close());
+
+    /* --------------------------------------------------------------------------
+       7. Dijital Filistin Arşivi Search & Tag Filtering
+       -------------------------------------------------------------------------- */
+    const archiveSearchInput = document.getElementById('archive-search');
+    const archiveTagBtns = document.querySelectorAll('.archive-tags .tag-btn');
+    const archiveCards = document.querySelectorAll('.archive-card');
+
+    let currentArchiveTag = 'all';
+
+    archiveTagBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            archiveTagBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentArchiveTag = btn.getAttribute('data-archive-tag') || 'all';
+            filterArchive();
+        });
+    });
+
+    archiveSearchInput?.addEventListener('input', filterArchive);
+
+    function filterArchive() {
+        const query = (archiveSearchInput?.value || '').toLowerCase().trim();
+        archiveCards.forEach(card => {
+            const tags = (card.getAttribute('data-tags') || '').split(' ');
+            const text = card.innerText.toLowerCase();
+            const matchesTag = (currentArchiveTag === 'all' || tags.includes(currentArchiveTag));
+            const matchesQuery = (query === '' || text.includes(query));
+
+            if (matchesTag && matchesQuery) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
 
     /* --------------------------------------------------------------------------
        8. BDS Boycott Search Filter
