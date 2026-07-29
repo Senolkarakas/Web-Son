@@ -262,7 +262,7 @@
                     </div>
                     <div class="archive-tags">
                         <button class="tag-btn active" data-archive-tag="all">Tüm Dokümanlar</button>
-                        <button class="tag-btn" data-archive-tag="rapor">BM & İnsan Hakları Raporları</button>
+                        <button class="tag-btn" data-archive-tag="rapor" onclick="document.getElementById('un-report-modal')?.showModal();">BM & İnsan Hakları Raporları</button>
                         <button class="tag-btn" data-archive-tag="hukuk">Hukuki Metinler</button>
                         <button class="tag-btn" data-archive-tag="kitap">Kitap & Makale</button>
                     </div>
@@ -272,22 +272,22 @@
                     <div class="archive-card" data-tags="rapor hukuk">
                         <div class="archive-icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
                         <div class="archive-content">
-                            <span class="doc-type-badge">BM Raporu • PDF (TR & EN)</span>
+                            <span class="doc-type-badge">BM Raporu • PDF (OHCHR)</span>
                             <h3 class="doc-title">
                                 <a href="#" class="un-report-trigger-link" style="color: inherit; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--palestine-red)'" onmouseout="this.style.color='inherit'" onclick="event.preventDefault(); document.getElementById('un-report-modal')?.showModal();">
-                                    İşgal Altındaki Filistin Toprakları ve İsrail Hakkında Bağımsız Uluslararası Soruşturma Komisyonu’nun Raporu <i class="fa-solid fa-up-right-from-square" style="font-size: 0.8rem; margin-left: 0.3rem; opacity: 0.7;"></i>
+                                    A/HRC/61/71: İşkence ve soykırım – 1967’den beri işgal altındaki Filistin topraklarındaki insan hakları durumuna ilişkin Özel Raportörün raporu <i class="fa-solid fa-up-right-from-square" style="font-size: 0.8rem; margin-left: 0.3rem; opacity: 0.7;"></i>
                                 </a>
                             </h3>
-                            <p class="doc-desc">Doğu Kudüs dahil İşgal Altındaki Filistin Toprakları ve İsrail'deki eğitim, kültür ve insan hakları ihlallerine ilişkin BM A/HRC/59/26 sayılı resmi soruşturma raporu.</p>
+                            <p class="doc-desc">19 Şubat 2026 • Bu rapor, 7 Ekim 2023 tarihinden bu yana işgal altındaki Filistin topraklarından gelen Filistinlilere karşı İsrail’in sistematik işkence uygulamalarını incelemektedir...</p>
                             <div class="doc-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 2025</span>
-                                <span><i class="fa-solid fa-download"></i> 14.2 bin İndirme</span>
-                                <span><i class="fa-solid fa-hard-drive"></i> PDF (TR & EN)</span>
+                                <span><i class="fa-regular fa-calendar"></i> 19 Şubat 2026</span>
+                                <span><i class="fa-solid fa-file-pdf"></i> OHCHR Raporu</span>
+                                <span><i class="fa-solid fa-globe"></i> BM İnsan Hakları Konseyi</span>
                             </div>
                         </div>
                         <div class="archive-action">
                             <button class="btn btn-sm btn-outline-primary un-report-trigger-btn" onclick="document.getElementById('un-report-modal')?.showModal();">
-                                <i class="fa-solid fa-download"></i> İndir
+                                <i class="fa-solid fa-book-open"></i> Raporu Oku
                             </button>
                         </div>
                     </div>
@@ -1414,50 +1414,33 @@
         </div>
     </dialog>
 
-    <!-- MODAL 3: UN Report Download Selection Modal -->
+    <!-- MODAL 3: UN Special Rapporteur Report Modal (A/HRC/61/71) -->
     <dialog class="custom-modal" id="un-report-modal">
-        <div class="modal-content glass-panel" style="padding: 2rem 2.5rem; max-width: 680px; border: 1px solid var(--border-color);">
+        <div class="modal-content glass-panel" style="padding: 2.2rem 2.5rem; max-width: 760px; border: 1px solid var(--border-color);">
             <button class="modal-close" id="close-un-report-modal"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-header text-center" style="margin-bottom: 2rem;">
+            <div class="modal-header text-center" style="margin-bottom: 1.5rem;">
                 <span class="section-tag red-tag" style="margin-bottom: 0.6rem; display: inline-flex; align-items: center; gap: 0.4rem;">
-                    <i class="fa-solid fa-file-pdf"></i> BM RESMİ RAPOR DOSYALARI
+                    <i class="fa-solid fa-file-pdf"></i> BM ÖZEL RAPORTÖRÜ RAPORU
                 </span>
-                <h3 class="modal-title" style="font-size: 1.35rem; line-height: 1.4; margin-top: 0.5rem;">
-                    İşgal Altındaki Filistin Toprakları ve İsrail Hakkında Bağımsız Uluslararası Soruşturma Komisyonu’nun Raporu
+                <h3 class="modal-title" style="font-size: 1.25rem; line-height: 1.45; margin-top: 0.4rem; color: #FFFFFF;">
+                    A/HRC/61/71: İşkence ve soykırım – 1967’den beri işgal altındaki Filistin topraklarındaki insan hakları durumuna ilişkin Özel Raportörün raporu
                 </h3>
-                <p class="modal-subtitle" style="margin-top: 0.6rem; color: var(--text-secondary); font-size: 0.95rem;">
-                    Birleşmiş Milletler İnsan Hakları Konseyi (A/HRC/59/26) Raporunu İndirmek İçin Dil Seçimi Yapınız:
+                <p class="modal-subtitle" style="margin-top: 0.5rem; color: #F59E0B; font-weight: 700; font-size: 0.95rem;">
+                    <i class="fa-regular fa-calendar"></i> 19 Şubat 2026
                 </p>
             </div>
             
-            <div style="display: flex; flex-direction: column; gap: 1.2rem;">
-                <!-- Option 1: Türkçe PDF -->
-                <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.6);">
-                    <div style="display: flex; align-items: center; gap: 1.2rem; flex: 1; min-width: 240px;">
-                        <div style="font-size: 2.4rem; color: var(--palestine-red);"><i class="fa-solid fa-file-pdf"></i></div>
-                        <div>
-                            <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">🇹🇷 Türkçe Rapor (A/HRC/59/26)</h4>
-                            <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Doğu Kudüs dahil İşgal Altındaki Filistin Toprakları ve İsrail Raporu Türkçe Metni</p>
-                        </div>
-                    </div>
-                    <a href="assets/UN_Sorusturma_Komisyonu_Raporu_TR.pdf" download="UN_Sorusturma_Komisyonu_Raporu_TR.pdf" class="btn btn-primary btn-md">
-                        <i class="fa-solid fa-download"></i> Türkçe İndir (.PDF)
-                    </a>
-                </div>
+            <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid var(--border-color); padding: 1.6rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; max-height: 420px; overflow-y: auto;">
+                <h4 style="font-weight: 700; color: #F59E0B; margin-bottom: 0.8rem; font-size: 1.1rem; border-bottom: 1px solid rgba(245, 158, 11, 0.3); padding-bottom: 0.4rem;">Özet</h4>
+                <p style="font-size: 1.02rem; line-height: 1.85; color: var(--text-secondary); text-align: justify; margin: 0;">
+                    Bu rapor, 7 Ekim 2023 tarihinden bu yana işgal altındaki Filistin topraklarından gelen Filistinlilere karşı İsrail’in sistematik işkence uygulamalarını incelemektedir; bu uygulamalar, hem gözaltı sırasında hem de gözaltı dışında gerçekleştirilen ve Soykırım Sözleşmesi kapsamında soykırım eşiğini karşılayan uygulamaları kapsamaktadır. Raporda, işkencenin, hem gözaltı sırasında uygulanan kötü muamele hem de uzun vadeli toplu acı ve ıstırap yaratmak amacıyla yürütülen, zorla yerinden edilme, toplu katliamlar, yoksun bırakma ve tüm yaşam kaynaklarının yok edilmesinden oluşan amansız bir kampanya yoluyla, erkekler, kadınlar ve çocuklara uygulanan egemenlik ve cezalandırmanın ayrılmaz bir parçası haline geldiği belgelenmektedir. Bedenleri kırmak, bir halkı haysiyetinden mahrum bırakmak ve topraklarından zorla çıkarmak amacıyla tasarlanmış, sürekli ve toprak genelinde yaygın bir psikolojik terör rejimi dayatılmaktadır. Bu, tesadüfi bir şiddet değildir. Bu, insanlıktan çıkarma temeli üzerine inşa edilmiş ve zulüm ile toplu işkence politikasıyla sürdürülen yerleşimci sömürgeciliğinin mimarisidir.
+                </p>
+            </div>
 
-                <!-- Option 2: English PDF -->
-                <div class="glass-card" style="padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.6);">
-                    <div style="display: flex; align-items: center; gap: 1.2rem; flex: 1; min-width: 240px;">
-                        <div style="font-size: 2.4rem; color: #3B82F6;"><i class="fa-solid fa-file-pdf"></i></div>
-                        <div>
-                            <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">🇬🇧 English Report (A/HRC/59/26)</h4>
-                            <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Report of the Independent International Commission of Inquiry</p>
-                        </div>
-                    </div>
-                    <a href="assets/UN_Commission_of_Inquiry_Report_EN.pdf" download="UN_Commission_of_Inquiry_Report_EN.pdf" class="btn btn-secondary btn-md">
-                        <i class="fa-solid fa-download"></i> Download English (.PDF)
-                    </a>
-                </div>
+            <div style="text-align: center; border-top: 1px solid var(--border-color); padding-top: 1.2rem;">
+                <a href="https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session61/advance-version/a-hrc-61-71-aev.pdf" target="_blank" class="btn btn-primary btn-lg btn-block" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; text-decoration: none; word-break: break-all;">
+                    <i class="fa-solid fa-file-pdf"></i> BM Orijinal Raporunun Tam PDF Metnine Eriş (.PDF) <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
             </div>
         </div>
     </dialog>
