@@ -60,9 +60,9 @@
                 <button class="theme-toggle" id="theme-toggle" title="Karanlık / Aydınlık Mod" aria-label="Tema Değiştir">
                     <i class="fa-solid fa-moon"></i>
                 </button>
-                <a href="#eylemler" class="btn btn-primary nav-cta">
+                <button type="button" id="open-eyleme-katil-btn" class="btn btn-primary nav-cta open-eyleme-katil-trigger">
                     <i class="fa-solid fa-hand-holding-heart"></i> Eyleme Katıl
-                </a>
+                </button>
                 <button class="mobile-toggle" id="mobile-toggle" aria-label="Menüyü Aç/Kapat">
                     <span></span><span></span><span></span>
                 </button>
@@ -96,7 +96,7 @@
             <a href="#tartismalar" class="drawer-link"><i class="fa-brands fa-youtube red-text"></i> YouTube Tartışmaları</a>
         </nav>
         <div class="drawer-footer">
-            <a href="#eylemler" class="btn btn-primary btn-block"><i class="fa-solid fa-hand-holding-heart"></i> Eyleme Katıl</a>
+            <button type="button" id="open-eyleme-katil-drawer-btn" class="btn btn-primary btn-block open-eyleme-katil-trigger"><i class="fa-solid fa-hand-holding-heart"></i> Eyleme Katıl</button>
         </div>
     </div>
     <div class="drawer-backdrop" id="drawer-backdrop"></div>
@@ -2058,6 +2058,64 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- MODAL 11: Eyleme Katıl (Filistin Föyü Çağrısı) Modal -->
+    <dialog class="custom-modal fop-actions-modal" id="eyleme-katil-modal" style="max-width: 780px;">
+        <div class="modal-content glass-panel fop-actions-modal-content">
+            <div class="fop-actions-modal-topbar">
+                <span class="section-tag red-tag" style="margin-bottom: 0; display: inline-flex; align-items: center; gap: 0.4rem;">
+                    <i class="fa-solid fa-hand-holding-heart"></i> EYLEME KATIL
+                </span>
+                <button type="button" class="modal-close fop-actions-close-btn" id="close-eyleme-katil-modal" aria-label="Kapat">
+                    <i class="fa-solid fa-xmark"></i> Kapat
+                </button>
+            </div>
+            <div class="fop-actions-modal-body eyleme-katil-modal-body">
+                <h3 class="eyleme-katil-title">
+                    🌍🇵🇸Filistin’e Özgürlük Platformu Yola Çıkıyor🚌✊
+                </h3>
+
+                <p class="eyleme-katil-paragraph">
+                    BM İklim Zirvesi COP31 bu yıl 9-20 Kasım tarihleri arasında Antalya'da yapılıyor. Bizler de 14-18 Kasım tarihlerinde yine Antalya'da COP31’e alternatif olarak örgütlenen Halkların İklim Zirvesi'ne (HİZ) ve 14 Kasım’daki Halkların İklim Yürüyüşü'ne katılıyoruz! 📢
+                </p>
+
+                <p class="eyleme-katil-paragraph">
+                    🔥 İklim adaleti taleplerimizi yükseltmek, Siyonizm’e karşı mücadeleyi büyütmek, savaşlara hayır demek, Filistin'e özgürlük için haykırmak ve 14 Kasım’daki büyük yürüyüşte <strong class="eyleme-katil-emphasis">*“nehirden Denize Özgür Filistin”*</strong> demek için oradayız!
+                </p>
+
+                <p class="eyleme-katil-paragraph">
+                    🌱 İklim krizinin faturasını halklara kesen, doğayı ve yaşamı sömüren kapitalizme karşı ekolojistlerin, işçilerin, gençlerin, savaş karşıtlarının ve hak savunucularının ortak sesini Antalya'da buluşturuyoruz.
+                </p>
+
+                <p class="eyleme-katil-paragraph eyleme-katil-media-paragraph">
+                    <img src="assets/sumud_filosu_ikon.png" alt="Global Sumud Flotilla" class="eyleme-katil-inline-img">
+                    <span>Antalya’da HİZ toplantıları kapsamında Sumud Filosu örgütçülerinden Yasemin Acar’ın, FÖP aktivistlerinin, Filistinli sendikacıların konuşmacı olacağı “Büyük Filistin Buluşması” forumunda bir araya geleceğiz.</span>
+                </p>
+
+                <p class="eyleme-katil-paragraph eyleme-katil-highlight-line">
+                    🎉 Antalya'ya gitmek üzere ücretsiz otobüsler kaldırıyoruz!
+                </p>
+
+                <div class="eyleme-katil-info-box glass-card">
+                    <p class="eyleme-katil-info-heading">Bilmeniz gerekenler:</p>
+                    <p class="eyleme-katil-info-item">🚌 Ücretsiz otobüslerimizle bizimle gelecekler</p>
+                    <p class="eyleme-katil-info-item">🚗 Kendi imkanlarıyla Antalya'ya gelip bizimle birlikte yürüyecek ve etkinliklere katılacak olan herkes...</p>
+                </div>
+
+                <p class="eyleme-katil-paragraph">
+                    👉 Aşağıdaki formu doldurarak bu büyük mücadelenin bir parçası olabilirsiniz!
+                </p>
+
+                <p class="eyleme-katil-form-box">
+                    <a href="https://docs.google.com/forms/d/1FcGQXlB27hdUzkLsyBjQIUksfD7684z3pe4q18qrQds/edit" target="_blank" rel="noopener noreferrer" class="eyleme-katil-form-link">https://docs.google.com/forms/d/1FcGQXlB27hdUzkLsyBjQIUksfD7684z3pe4q18qrQds/edit</a>
+                </p>
+
+                <p class="eyleme-katil-closing">
+                    Gelin hep birlikte bu uluslararası zirvede ve yürüyüşte omuz omuza verelim! 💚✊
+                </p>
             </div>
         </div>
     </dialog>

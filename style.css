@@ -713,6 +713,111 @@ button { cursor: pointer; }
     overflow-wrap: anywhere;
 }
 
+.eyleme-katil-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.eyleme-katil-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.3rem, 3vw, 1.65rem);
+    font-weight: 800;
+    line-height: 1.35;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.eyleme-katil-paragraph {
+    font-size: 1.04rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.eyleme-katil-emphasis {
+    color: var(--palestine-gold);
+    font-style: italic;
+    font-weight: 800;
+}
+
+.eyleme-katil-media-paragraph {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.2rem;
+}
+
+.eyleme-katil-inline-img {
+    width: 72px;
+    height: auto;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    object-fit: contain;
+    margin-top: 0.15rem;
+}
+
+.eyleme-katil-highlight-line {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--palestine-gold);
+}
+
+.eyleme-katil-info-box {
+    padding: 1.15rem 1.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    border-left: 4px solid var(--palestine-green);
+}
+
+.eyleme-katil-info-heading {
+    font-weight: 800;
+    font-size: 1.04rem;
+    color: var(--text-primary);
+    margin: 0 0 0.2rem;
+}
+
+.eyleme-katil-info-item {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.eyleme-katil-form-box {
+    background: rgba(228, 49, 43, 0.12);
+    border: 1px solid rgba(228, 49, 43, 0.45);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    margin: 0;
+}
+
+.eyleme-katil-form-link {
+    color: var(--palestine-gold);
+    font-weight: 700;
+    font-size: 0.98rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+}
+
+.eyleme-katil-form-link:hover {
+    color: #FFFFFF;
+}
+
+.eyleme-katil-closing {
+    font-size: 1.1rem;
+    font-weight: 800;
+    line-height: 1.7;
+    color: #10B981;
+    margin: 0.2rem 0 0;
+}
+
 .site-footer { background: #05080E; border-top: 1px solid var(--border-color); padding: 5rem 0 2rem; }
 .footer-top { margin-bottom: 4rem; }
 .footer-col .footer-heading { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; }
@@ -963,4 +1068,5 @@ button { cursor: pointer; }
     .featured-event-card { padding: 2.75rem 1.5rem 1.75rem; }
     .featured-action-modal-row { flex-direction: column; }
     .featured-action-contact-box { min-width: 0; width: 100%; }
+    .eyleme-katil-media-paragraph { flex-direction: column; }
 }

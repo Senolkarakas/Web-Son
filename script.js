@@ -505,6 +505,27 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === featuredActionModal) featuredActionModal.close();
     });
 
+    /* --------------------------------------------------------------------------
+       19. Eyleme Katıl (Filistin Föyü Çağrısı) Modal Controls
+       -------------------------------------------------------------------------- */
+    const eylemeKatilModal = document.getElementById('eyleme-katil-modal');
+    const closeEylemeKatilModalBtn = document.getElementById('close-eyleme-katil-modal');
+
+    document.querySelectorAll('.open-eyleme-katil-trigger').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeDrawer();
+            if (eylemeKatilModal && !eylemeKatilModal.open) {
+                eylemeKatilModal.showModal();
+            }
+        });
+    });
+
+    closeEylemeKatilModalBtn?.addEventListener('click', () => eylemeKatilModal?.close());
+    eylemeKatilModal?.addEventListener('click', (e) => {
+        if (e.target === eylemeKatilModal) eylemeKatilModal.close();
+    });
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             if (vicdanFilesModal?.open) vicdanFilesModal.close();
@@ -514,6 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (worldVoicesModal?.open) worldVoicesModal.close();
             if (sokaginSesiModal?.open) sokaginSesiModal.close();
             if (featuredActionModal?.open) featuredActionModal.close();
+            if (eylemeKatilModal?.open) eylemeKatilModal.close();
         }
     });
 
