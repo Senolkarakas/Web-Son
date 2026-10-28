@@ -395,7 +395,7 @@ button { cursor: pointer; }
 }
 .hero-section { padding: 8rem 0 6rem; position: relative; overflow: hidden; }
 .hero-bg-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 50% 20%, rgba(0, 122, 61, 0.15) 0%, rgba(228, 49, 43, 0.08) 45%, rgba(9, 13, 20, 1) 90%); pointer-events: none; }
-.hero-container { position: relative; z-index: 2; text-align: center; max-width: 1050px; }
+.hero-container { position: relative; z-index: 2; text-align: center; max-width: 1360px; }
 
 .hero-badge {
     display: inline-flex;
@@ -428,25 +428,75 @@ button { cursor: pointer; }
     text-shadow: 0 4px 30px rgba(0,0,0,0.5);
 }
 
-.hero-description { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.75; }
+.hero-description { font-size: 1.2rem; color: var(--text-secondary); margin: 0 auto 2.5rem; max-width: 1000px; line-height: 1.75; }
 .hero-buttons { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin-bottom: 3.5rem; flex-wrap: wrap; }
 
-/* Three Requested Feature Cards (Günün Sözü, Vicdan Mahkemesi, İsrail'in Savaş Suçları) */
+/* Four Requested Feature Cards (Günün Sözü, Küresel İntifada, Savaş Suçları Dosyası, Duyurular-Tanıtımlar) */
 .hero-highlights-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.8rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.35rem;
     margin-top: 2.5rem;
     text-align: left;
+    align-items: stretch;
 }
 
 .highlight-card {
-    padding: 1.8rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto;
+    height: 100%;
     min-height: 100%;
+    min-width: 0;
+}
+
+.announcement-card-content {
+    container-type: inline-size;
+    display: flow-root;
+    margin-bottom: 0.4rem;
+}
+
+.announcement-card-media {
+    float: left;
+    width: 46%;
+    max-width: 165px;
+    margin: 0.15rem 0.75rem 0.45rem 0;
+}
+
+.announcement-card-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    display: block;
+}
+
+.announcement-card-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
+.announcement-card-text strong {
+    color: var(--text-primary);
+    font-weight: 800;
+}
+
+.announcement-read-more-link {
+    width: fit-content;
+}
+
+@container (max-width: 255px) {
+    .announcement-card-media {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 0.75rem 0;
+    }
 }
 
 .highlight-badge {
@@ -1081,12 +1131,12 @@ button { cursor: pointer; }
 @media (max-width: 1080px) {
     .nav-menu, .nav-cta { display: none; }
     .mobile-toggle { display: flex; }
-    .grid-4, .grid-3, .news-grid, .youtube-grid, .hero-highlights-grid { grid-template-columns: repeat(2, 1fr); }
+    .grid-4, .grid-3, .news-grid, .youtube-grid, .hero-highlights-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .news-card.feature-card { grid-column: span 2; }
 }
 
 @media (max-width: 768px) {
-    .grid-2, .grid-3, .grid-4, .news-grid, .youtube-grid, .hero-highlights-grid { grid-template-columns: 1fr; }
+    .grid-2, .grid-3, .grid-4, .news-grid, .youtube-grid, .hero-highlights-grid { grid-template-columns: minmax(0, 1fr); }
     .news-card.feature-card { grid-column: span 1; grid-template-columns: 1fr; }
     .archive-card { flex-direction: column; align-items: flex-start; }
     .fop-actions-trigger-btn { padding: 0.8rem 1.25rem; font-size: 0.98rem; }
@@ -1096,4 +1146,5 @@ button { cursor: pointer; }
     .featured-action-modal-row { flex-direction: column; }
     .featured-action-contact-box { min-width: 0; width: 100%; }
     .eyleme-katil-media-paragraph { flex-direction: column; }
+    .announcement-card-media { float: none; width: 100%; max-width: 100%; margin: 0 0 0.75rem 0; }
 }
