@@ -509,14 +509,24 @@ document.addEventListener('DOMContentLoaded', () => {
        19. Eyleme Katıl (Filistin Föyü Çağrısı) Modal Controls
        -------------------------------------------------------------------------- */
     const eylemeKatilModal = document.getElementById('eyleme-katil-modal');
+    const eylemeKatilModalBody = eylemeKatilModal?.querySelector('.eyleme-katil-modal-body');
     const closeEylemeKatilModalBtn = document.getElementById('close-eyleme-katil-modal');
+
+    function resetEylemeKatilModalScroll() {
+        if (eylemeKatilModal) eylemeKatilModal.scrollTop = 0;
+        if (eylemeKatilModalBody) eylemeKatilModalBody.scrollTop = 0;
+    }
 
     document.querySelectorAll('.open-eyleme-katil-trigger').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             closeDrawer();
-            if (eylemeKatilModal && !eylemeKatilModal.open) {
-                eylemeKatilModal.showModal();
+            if (eylemeKatilModal) {
+                if (!eylemeKatilModal.open) {
+                    eylemeKatilModal.showModal();
+                }
+                resetEylemeKatilModalScroll();
+                requestAnimationFrame(resetEylemeKatilModalScroll);
             }
         });
     });

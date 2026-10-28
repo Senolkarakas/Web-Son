@@ -719,6 +719,33 @@ button { cursor: pointer; }
     gap: 1.15rem;
 }
 
+.eyleme-katil-lead-announcement {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.eyleme-katil-strong {
+    font-weight: 800;
+    color: var(--palestine-gold);
+}
+
+.eyleme-katil-signature {
+    font-size: 1.04rem;
+    font-weight: 800;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.eyleme-katil-divider {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 0.45rem 0;
+    width: 100%;
+    flex-shrink: 0;
+}
+
 .eyleme-katil-title {
     font-family: var(--font-serif);
     font-size: clamp(1.3rem, 3vw, 1.65rem);
