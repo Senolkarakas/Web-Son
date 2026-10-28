@@ -284,23 +284,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* --------------------------------------------------------------------------
-       11. Event & Online Meeting Modal Controls
-       -------------------------------------------------------------------------- */
-    const rsvpModal = document.getElementById('rsvp-modal');
-    const closeRsvpModalBtn = document.getElementById('close-rsvp-modal');
-
-    document.querySelectorAll('.rsvp-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            if (rsvpModal && !rsvpModal.open) rsvpModal.showModal();
-        });
-    });
-
-    closeRsvpModalBtn?.addEventListener('click', () => rsvpModal?.close());
-    rsvpModal?.addEventListener('click', (e) => {
-        if (e.target === rsvpModal) rsvpModal.close();
-    });
-
-    /* --------------------------------------------------------------------------
        12. UN Report Download Modal Controls
        -------------------------------------------------------------------------- */
     const unReportModal = document.getElementById('un-report-modal');
@@ -506,7 +489,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* --------------------------------------------------------------------------
-       19. Eyleme Katıl (Filistin Föyü Çağrısı) Modal Controls
+       19. Eyleme Katıl & Etkinlik ve Stantlara Katıl Modal Controls
        -------------------------------------------------------------------------- */
     const eylemeKatilModal = document.getElementById('eyleme-katil-modal');
     const eylemeKatilModalBody = eylemeKatilModal?.querySelector('.eyleme-katil-modal-body');
@@ -517,17 +500,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (eylemeKatilModalBody) eylemeKatilModalBody.scrollTop = 0;
     }
 
-    document.querySelectorAll('.open-eyleme-katil-trigger').forEach(btn => {
+    function openEylemeKatilModal() {
+        closeDrawer();
+        if (eylemeKatilModal) {
+            if (!eylemeKatilModal.open) {
+                eylemeKatilModal.showModal();
+            }
+            resetEylemeKatilModalScroll();
+            requestAnimationFrame(resetEylemeKatilModalScroll);
+        }
+    }
+
+    document.querySelectorAll('.open-eyleme-katil-trigger, .rsvp-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            closeDrawer();
-            if (eylemeKatilModal) {
-                if (!eylemeKatilModal.open) {
-                    eylemeKatilModal.showModal();
-                }
-                resetEylemeKatilModalScroll();
-                requestAnimationFrame(resetEylemeKatilModalScroll);
-            }
+            openEylemeKatilModal();
         });
     });
 

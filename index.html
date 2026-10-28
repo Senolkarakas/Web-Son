@@ -126,7 +126,7 @@
                 </p>
 
                 <div class="hero-buttons animate-up delay-2">
-                    <button class="btn btn-primary btn-lg rsvp-btn" onclick="document.getElementById('rsvp-modal')?.showModal();">
+                    <button type="button" class="btn btn-primary btn-lg rsvp-btn open-eyleme-katil-trigger">
                         <i class="fa-solid fa-bullhorn"></i> Etkinlik ve Stantlara Katıl
                     </button>
                     <a href="https://www.youtube.com/@FilistineOzgurlukPlatformu" target="_blank" class="btn btn-secondary btn-lg">
@@ -1086,27 +1086,6 @@
         <div class="modal-content glass-panel">
             <button class="modal-close" id="close-article-modal"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-body" id="article-modal-body"></div>
-        </div>
-    </dialog>
-
-    <!-- MODAL 2: Online Meeting Announcement Modal -->
-    <dialog class="custom-modal" id="rsvp-modal">
-        <div class="modal-content glass-panel" style="padding: 2.2rem 2rem; max-width: 600px; border: 1px solid var(--border-color); max-height: 90vh; overflow-y: auto;">
-            <button class="modal-close" id="close-rsvp-modal" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
-
-            <div class="modal-header" style="margin-bottom: 1.25rem; padding-right: 2rem;">
-                <h3 class="modal-title" style="font-family: var(--font-serif); font-size: clamp(1.35rem, 3vw, 1.65rem); line-height: 1.35; color: var(--text-primary);">
-                    FÖP online toplantısında buluşalım
-                </h3>
-            </div>
-
-            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                Filistin’e Özgürlük isteyenler olarak 27 Ekim Salı günü saat 22.00’de online bir toplantı gerçekleştiriyoruz. Hem İsrail’in soykırımcı saldırılarına ve Batı Şeria’daki kanlı saldırılarına karşı neler yapacağımızı hem mevcut kampanyalarımızı hem de Yemen Tezkeresi konusunda hangi adımları atacağımızı konuşacağız.
-            </p>
-
-            <div style="background: rgba(0, 122, 61, 0.15); border: 1px solid var(--palestine-green); padding: 1rem 1.25rem; border-radius: var(--radius-md); font-weight: 700; color: var(--text-primary); font-size: 1.05rem; line-height: 1.6;">
-                Katılmak isteyenler için iletişim: <a href="tel:+905368888367" style="color: #10B981; text-decoration: underline; text-underline-offset: 4px; white-space: nowrap;">05368888367</a>
-            </div>
         </div>
     </dialog>
 
