@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filistin’e Özgürlük Platformu Aktivistleri Başından Sonuna Kadar Halkların İklim Zirvesi’ndeydi | Filistin'e Özgürlük Platformu</title>
+    <meta name="description" content="Filistin’e Özgürlük Platformu (FÖP) aktivistlerinin Antalya Halkların İklim Zirvesi (HİZ) değerlendirmesi ve fotoğraf galerisi.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for crisp icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hiz-page-section {
+            padding: 3.5rem 0 5rem;
+            position: relative;
+        }
+
+        .hiz-page-container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .hiz-back-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hiz-back-bar.bottom {
+            margin-top: 3rem;
+            margin-bottom: 0;
+            justify-content: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .hiz-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.75rem 1.4rem;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .hiz-back-btn:hover {
+            background: var(--palestine-green);
+            border-color: var(--palestine-green);
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-green-glow);
+        }
+
+        .hiz-article-card {
+            padding: clamp(1.5rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+        }
+
+        .hiz-article-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.65rem, 3.6vw, 2.55rem);
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin: 0.5rem 0 1.75rem;
+        }
+
+        .hiz-article-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.35rem;
+        }
+
+        .hiz-article-content p {
+            font-size: clamp(1.02rem, 1.5vw, 1.12rem);
+            line-height: 1.85;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .hiz-gallery-header {
+            margin-bottom: 1.75rem;
+            text-align: center;
+        }
+
+        .hiz-gallery-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.45rem, 3vw, 2rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .hiz-gallery-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .hiz-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.25rem;
+        }
+
+        .hiz-gallery-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background: rgba(15, 23, 42, 0.7);
+            cursor: pointer;
+            aspect-ratio: 4 / 3;
+            padding: 0;
+            display: block;
+            width: 100%;
+            transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+        }
+
+        .hiz-gallery-item:hover,
+        .hiz-gallery-item:focus-visible {
+            transform: translateY(-4px);
+            border-color: var(--palestine-green);
+            box-shadow: var(--shadow-lg);
+            outline: none;
+        }
+
+        .hiz-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .hiz-gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+        .hiz-gallery-zoom-badge {
+            position: absolute;
+            bottom: 0.65rem;
+            right: 0.65rem;
+            background: rgba(9, 13, 20, 0.82);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: var(--radius-full);
+            padding: 0.35rem 0.7rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            backdrop-filter: blur(6px);
+            pointer-events: none;
+        }
+
+        /* Lightbox Modal */
+        .hiz-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+            background: rgba(5, 8, 14, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .hiz-lightbox.active {
+            display: flex;
+        }
+
+        .hiz-lightbox-inner {
+            position: relative;
+            max-width: 1120px;
+            width: 100%;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hiz-lightbox-topbar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.85rem;
+            gap: 1rem;
+        }
+
+        .hiz-lightbox-counter {
+            color: #F8FAFC;
+            font-weight: 700;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.4rem 0.9rem;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .hiz-lightbox-close {
+            background: var(--palestine-red);
+            color: #FFFFFF;
+            border: 1px solid var(--palestine-red);
+            border-radius: var(--radius-md);
+            padding: 0.5rem 1.1rem;
+            font-weight: 700;
+            font-size: 0.92rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .hiz-lightbox-close:hover {
+            background: var(--palestine-red-hover);
+        }
+
+        .hiz-lightbox-stage {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hiz-lightbox-img {
+            max-width: 100%;
+            max-height: 78vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+        }
+
+        .hiz-lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: rgba(17, 24, 39, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .hiz-lightbox-nav:hover {
+            background: var(--palestine-green);
+            border-color: var(--palestine-green);
+        }
+
+        .hiz-lightbox-nav.prev {
+            left: 0.5rem;
+        }
+
+        .hiz-lightbox-nav.next {
+            right: 0.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .hiz-gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hiz-gallery-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .hiz-gallery-item {
+                aspect-ratio: auto;
+            }
+            .hiz-gallery-item img {
+                height: auto;
+                object-fit: contain;
+            }
+            .hiz-lightbox {
+                padding: 0.85rem;
+            }
+            .hiz-lightbox-nav {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dynamic Reading Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Announcement & Urgent Ticker -->
+    <div class="urgent-ticker">
+        <div class="ticker-content">
+            <span class="ticker-badge"><i class="fa-solid fa-bullhorn"></i></span>
+            <span class="ticker-text">Acil Çağrı: Batı Şeria'da artan şiddete sessiz kalmayalım, soykırımı durduralım!</span>
+        </div>
+    </div>
+
+    <!-- Navbar Section -->
+    <header class="navbar-header" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo" aria-label="Filistin'e Özgürlük Ana Sayfası">
+                <svg viewBox="0 0 420 180" class="official-logo-svg">
+                    <rect x="24" y="8" width="14" height="82" class="top-stripe" />
+                    <rect x="24" y="90" width="14" height="82" fill="#007A3D" />
+                    <polygon points="0,50 0,130 58,90" fill="#E4312B" />
+                    <text x="76" y="74" font-size="64" font-weight="800" class="logo-text">Filistin’e</text>
+                    <text x="76" y="152" font-size="64" font-weight="800" class="logo-text">Özgürlük</text>
+                </svg>
+            </a>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" title="Karanlık / Aydınlık Mod" aria-label="Tema Değiştir">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="index.html" class="btn btn-primary nav-cta">
+                    <i class="fa-solid fa-house"></i> Ana Sayfaya Dön
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hiz-page-section">
+            <div class="hiz-page-container">
+                <!-- Top Return Button -->
+                <div class="hiz-back-bar">
+                    <a href="index.html" class="hiz-back-btn">
+                        <i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Dön
+                    </a>
+                    <span class="section-tag green-tag" style="margin-bottom: 0;">
+                        <i class="fa-solid fa-seedling"></i> HALKLARIN İKLİM ZİRVESİ • ANTALYA
+                    </span>
+                </div>
+
+                <!-- Main Article Content -->
+                <article class="glass-panel hiz-article-card">
+                    <h1 class="hiz-article-title">
+                        Filistin’e Özgürlük Platformu Aktivistleri Başından Sonuna Kadar Halkların İklim Zirvesi’ndeydi
+                    </h1>
+
+                    <div class="hiz-article-content">
+                        <p>
+                            FÖP olarak çok başarılı bir Halkların İklim Zirvesi sürecini geride bıraktık. Denilebilir ki FÖP, bir grup Filistin dostu, dünyadan gelen aktivistler ve bizzat Filistinlilerle beraber Halkların İklim Zirvesi'ndeki herkesle beraber tüm süreci sonuna kadar Filistinleştirdik, Gazzeleştirdik. Filistin bayrakları, Filistin sloganları, soykırıma karşı mücadele çağrıları, iklim kriziyle işgal ve soykırım arasındaki bağlantılar ve soykırımı mücadelesinin merkezine almayan bir iklim mücadelesinin kof olacağı yönündeki vurguların politik açıdan bütün Halkların İklim Zirvesi ana toplantılarında hâkim hâle geldiğini gördük.
+                        </p>
+
+                        <p>
+                            Yürüyüş zaten birlik içinde çeşitlilik gibi göründü. Ortak sloganların olduğu, tüm ezilenlerin aynı anda haykırdığı bir kortejimiz vardı. En baştan bizim korteje kadar olan bölüm baştan sona bir Filistin yürüyüşü gibiydi. Aynı zamanda haklı bir talebin yanı sıra özellikle uluslararası kortejdekiler ve bizler; Filistin konusunu, savaşa karşı, işgale karşı, soykırıma karşı ses çıkarılmasını yürüyüşün ana motifi hâline getirdik. Ve Filistin bayraklarımız, davullarla beraber Filistin için çıkardığımız sesler çok etkileyici oldu.
+                        </p>
+
+                        <p>
+                            Yürüyüşün ertesi günü 15'inde hemen stantlarımızı açtık. Aktivistlerimiz ve birçok arkadaş standın yanındaydı. Filistin'e Özgürlük Platformu standının hemen yanında Hayvan Hakları ve Yaşatacağız Platformu'nun standı vardı. En canlı, insanların gelip konuştuğu, Hatice hanımın ördüğü karpuzların ve rozetlerimizin dağıtıldığı, imzaların verildiği bir stant olarak işledi. Bir de FÖP standında savaşa hayır imza föyümüz vardı; onlarca imza. FÖP standı, 17 Kasım'daki savaş karşıtı ana gündemin, o gündem içinde yapılacak olan işlerin planlandığı bir merkez gibi çalıştı.
+                        </p>
+
+                        <p>
+                            Ankara’dan bir aktivist arkadaşımızın da katılmasıyla beraber enerjimiz daha da arttı, uluslararası Filistin dayanışması örgütlerinin enerji ambargosu basın toplantısının inşasında çok merkezi bir rol oynadık. Aynı zamanda o basın toplantısının açılış konuşmasını yaptık. Filistin'e Özgürlük Platformu olarak Halkların İklim Zirvesi'nde çok önemli bir yer tuttuk. Bu zirveye çok önemli bir katkıda bulunduk. Onlarca yeni insanla tanıştık. Uluslararası aktivistlerle tanıştık. Filistinlilerle tanıştık, sarıldık, el ele tutuştuk. Ve Filistin için mücadelenin neden ara verilemez olduğunu hem kendimize hem de oraya gelen herkese bir kez daha gösterdik.
+                        </p>
+
+                        <p>
+                            Yasemin Acar’ın katılımı da tüm HİZ faaliyetlerine ayrıca güç kattı. Hem stantta duran hem de her alanda katkıda bulunan herkes hep beraber çok önemli bir iş yaptık. Filistin'e Özgürlük Platformu, Halkların İklim Zirvesi'nde Filistin'in ana gündem olmasının temel motoru oldu. Hem ilk toplantıda hem basın toplantısında hem de üçüncü toplantıda, Büyük Filistin Buluşması toplantısında bütün yanlarıyla Filistin meselesini tartışmış olduk. Çok başarılı bir etkinlik oldu FÖP için. Ayrıca dört şehirden FÖP aktivistleri tanışmış olduk. Şimdi hep beraber yeni Filistin mücadelesinin ihtiyaç duyduğu eylemleri planlamak için daha güçlüyüz.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Photo Gallery Section -->
+                <div class="hiz-gallery-section">
+                    <div class="hiz-gallery-header">
+                        <h2 class="hiz-gallery-title"><i class="fa-solid fa-images green-text"></i> Halkların İklim Zirvesi’nden Kareler</h2>
+                        <p class="hiz-gallery-subtitle">Fotoğrafları tam ekran büyütmek için üzerlerine tıklayabilirsiniz.</p>
+                    </div>
+
+                    <div class="hiz-gallery-grid" id="hiz-gallery-grid">
+                        <button type="button" class="hiz-gallery-item" data-index="0" aria-label="Halkların İklim Zirvesi Fotoğraf 1">
+                            <img src="assets/hiz/1.jpeg" alt="Halkların İklim Zirvesi Filistin’e Özgürlük Platformu Yürüyüşü - Fotoğraf 1" loading="lazy">
+                            <span class="hiz-gallery-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i> 1 / 9</span>
+                        </button>
+                        <button type="button" class="hiz-gallery-item" data-index="1" aria-label="Halkların İklim Zirvesi Fotoğraf 2">
+                            <img src="assets/hiz/2.jpeg" alt="Halkların İklim Zirvesi Filistin’e Özgürlük Platformu Standı - Fotoğraf 2" loading="lazy">
+                            <span class="hiz-gallery-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i> 2 / 9</span>
+                        </button>
+                        <button type="button" class="hiz-gallery-item" data-index="2" aria-label="Halkların İklim Zirvesi Fotoğraf 3">
+                            <img src="assets/hiz/3.jpeg" alt="Halkların İklim Zirvesi Filistin’e Özgürlük Platformu Stand Hazırlığı - Fotoğraf 3" loading="lazy">
+                            <span class="hiz-gallery-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i> 3 / 9</span>
+                        </button>
+                        <button type="button" class="hiz-gallery-item" data-index="3" aria-label="Halkların İklim Zirvesi Fotoğraf 4">
+                            <img src="assets/hiz/4.jpeg" alt="Halkların İklim Zirvesi Enerji Ambargosu Basın Toplantısı - Fotoğraf 4" loading="lazy">
+                            <span class="hiz-gallery-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i> 4 / 9</span>
+                        </button>
+                        <button type="button" class="hiz-gallery-item" data-index="4" aria-label="Halkların İklim Zirvesi Fotoğraf 5">
+                            <img src="assets/hiz/5.jpeg" alt="Halkların İklim Zirvesi Basın Toplantısı Açılış Konuşması - Fotoğraf 5" loading="lazy">
+                            <span class="hiz-gallery-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i> 5 / 9</span>
+                        </button>
+                        <button type="button" class="hiz-gallery-item" data-index="5" aria-label="Halkların İklim Zirvesi Fotoğraf 6">
+                            <img src="assets/hiz/6.jpeg" alt="Halkların İklim Zirvesi Konuşmacıları - Fotoğraf 6" loading="lazy">
+                            <span class="hiz-gallery-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i> 6 / 9</span>
+                        </button>
+                        <button type="button" class="hiz-gallery-item" data-index="6" aria-label="Halkların İklim Zirvesi Fotoğraf 7">
+                            <img src="assets/hiz/7.jpeg" alt="Halkların İklim Zirvesi Alanında Filistin Bayrakları - Fotoğraf 7" loading="lazy">
+                            <span class="hiz-gallery-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i> 7 / 9</span>
+                        </button>
+                        <button type="button" class="hiz-gallery-item" data-index="7" aria-label="Halkların İklim Zirvesi Fotoğraf 8">
+                            <img src="assets/hiz/8.jpeg" alt="Halkların İklim Zirvesi Filistin’e Özgürlük Platformu Aktivistleri - Fotoğraf 8" loading="lazy">
+                            <span class="hiz-gallery-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i> 8 / 9</span>
+                        </button>
+                        <button type="button" class="hiz-gallery-item" data-index="8" aria-label="Halkların İklim Zirvesi Fotoğraf 9">
+                            <img src="assets/hiz/9.jpeg" alt="Halkların İklim Zirvesi FÖP Standı İmza Çalışması - Fotoğraf 9" loading="lazy">
+                            <span class="hiz-gallery-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i> 9 / 9</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bottom Return Button -->
+                <div class="hiz-back-bar bottom">
+                    <a href="index.html" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Dön
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 Filistin'e Özgürlük Platformu. Tüm hakları dayanışmaya ve adalet arayan tüm insanlığa açıktır.</p>
+                <div class="flag-bar">
+                    <span class="flag-stripe black"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fullscreen Lightbox Overlay -->
+    <div class="hiz-lightbox" id="hiz-lightbox" role="dialog" aria-modal="true" aria-label="Fotoğraf Görünümü">
+        <div class="hiz-lightbox-inner">
+            <div class="hiz-lightbox-topbar">
+                <span class="hiz-lightbox-counter" id="hiz-lightbox-counter">1 / 9</span>
+                <button type="button" class="hiz-lightbox-close" id="hiz-lightbox-close" aria-label="Kapat">
+                    <i class="fa-solid fa-xmark"></i> Kapat
+                </button>
+            </div>
+            <div class="hiz-lightbox-stage">
+                <button type="button" class="hiz-lightbox-nav prev" id="hiz-lightbox-prev" aria-label="Önceki Fotoğraf">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <img src="assets/hiz/1.jpeg" alt="Halkların İklim Zirvesi Fotoğrafı" class="hiz-lightbox-img" id="hiz-lightbox-img">
+                <button type="button" class="hiz-lightbox-nav next" id="hiz-lightbox-next" aria-label="Sonraki Fotoğraf">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Toggle support
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const htmlElem = document.documentElement;
+            const savedTheme = localStorage.getItem('fo_theme') || 'dark';
+            htmlElem.setAttribute('data-theme', savedTheme);
+
+            function updateThemeIcon(theme) {
+                if (!themeToggleBtn) return;
+                const icon = themeToggleBtn.querySelector('i');
+                if (theme === 'light') {
+                    icon.className = 'fa-solid fa-sun';
+                    themeToggleBtn.title = 'Karanlık Moda Geç';
+                } else {
+                    icon.className = 'fa-solid fa-moon';
+                    themeToggleBtn.title = 'Aydınlık Moda Geç';
+                }
+            }
+            updateThemeIcon(savedTheme);
+
+            themeToggleBtn?.addEventListener('click', () => {
+                const currentTheme = htmlElem.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                htmlElem.setAttribute('data-theme', newTheme);
+                localStorage.setItem('fo_theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+
+            // Reading Progress Bar
+            const scrollProgress = document.getElementById('scroll-progress');
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                if (scrollProgress) scrollProgress.style.width = `${scrolled}%`;
+            });
+
+            // Lightbox Logic
+            const photos = [
+                'assets/hiz/1.jpeg',
+                'assets/hiz/2.jpeg',
+                'assets/hiz/3.jpeg',
+                'assets/hiz/4.jpeg',
+                'assets/hiz/5.jpeg',
+                'assets/hiz/6.jpeg',
+                'assets/hiz/7.jpeg',
+                'assets/hiz/8.jpeg',
+                'assets/hiz/9.jpeg'
+            ];
+
+            const lightbox = document.getElementById('hiz-lightbox');
+            const lightboxImg = document.getElementById('hiz-lightbox-img');
+            const lightboxCounter = document.getElementById('hiz-lightbox-counter');
+            const closeBtn = document.getElementById('hiz-lightbox-close');
+            const prevBtn = document.getElementById('hiz-lightbox-prev');
+            const nextBtn = document.getElementById('hiz-lightbox-next');
+            let currentIndex = 0;
+
+            function showPhoto(index) {
+                currentIndex = (index + photos.length) % photos.length;
+                lightboxImg.src = photos[currentIndex];
+                lightboxImg.alt = `Halkların İklim Zirvesi - Fotoğraf ${currentIndex + 1}`;
+                lightboxCounter.textContent = `${currentIndex + 1} / ${photos.length}`;
+            }
+
+            function openLightbox(index) {
+                showPhoto(index);
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('.hiz-gallery-item').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const idx = parseInt(btn.getAttribute('data-index') || '0', 10);
+                    openLightbox(idx);
+                });
+            });
+
+            closeBtn?.addEventListener('click', closeLightbox);
+            prevBtn?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showPhoto(currentIndex - 1);
+            });
+            nextBtn?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showPhoto(currentIndex + 1);
+            });
+
+            lightbox?.addEventListener('click', (e) => {
+                if (e.target === lightbox || e.target.classList.contains('hiz-lightbox-stage')) {
+                    closeLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') showPhoto(currentIndex - 1);
+                if (e.key === 'ArrowRight') showPhoto(currentIndex + 1);
+            });
+        });
+    </script>
+</body>
+</html>
